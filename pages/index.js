@@ -7,7 +7,7 @@ import Footer from "../components/footer/footer";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>
           Hội thảo khoa học quốc gia Công nghệ thông tin và ứng dụng trong các

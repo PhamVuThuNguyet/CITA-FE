@@ -6,7 +6,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Montserrat;
+  font-family: Montserrat, Futura;
 }
 
 a {
@@ -26,4 +26,9 @@ a {
     color: white;
     background: black;
   }
+}
+
+@font-face {
+  font-family: Futura;
+  src: url("../public/unicode.futurab.ttf");
 }

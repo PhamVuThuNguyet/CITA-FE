@@ -1,0 +1,31 @@
+.header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+.content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title {
+  margin: 0;
+  line-height: 2;
+  font-size: 3rem;
+  font-family: Futura;
+  color: #ffc452;
+  font-weight: bold;
+}
+.sub_title {
+  line-height: 1;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.055rem;
+}

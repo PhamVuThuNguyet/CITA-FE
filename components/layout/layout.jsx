@@ -3,7 +3,6 @@ import styles from "../../styles/Layout.module.css";
 
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
-import { Children } from "react";
 
 export default function Layout({children}) {
   return (

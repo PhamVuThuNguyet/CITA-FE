@@ -1,4 +1,3 @@
-import styles from "../../styles/HomeContent.module.css";
 export default function HomeContent() {
   return (
     <div className='flex w-full min-h-screen bg-[#FFEFD1] py-12 px-32 gap-8'>

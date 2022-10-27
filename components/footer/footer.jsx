@@ -1,14 +1,12 @@
-import styles from "../../styles/Footer.module.css";
+import styles from "./styles.module.scss";
+import { convertArrayToObject } from '../../utils';
 
-export default function Footer() {
+export default function Footer({ data }) {
+  const footerData = convertArrayToObject(data.elements)
   return (
     <div className={styles.footer}>
-      <div>
-      VKU -  Vietnam-Korea University of Information and Communication Technology
-      </div>
-      <div>
-      Developed by culi of nguyet lmao || Copyright © 2012-2022 - Hội thảo khoa học CITA 2022 
-      </div>
+      <div dangerouslySetInnerHTML={{ __html: footerData.Footer_School_Name }}></div>
+      <div dangerouslySetInnerHTML={{ __html: footerData.Footer_CopyRight }}></div>
     </div>
   );
 }

@@ -1,10 +1,9 @@
 import HomeContent from "../components/home/home-content";
-import Layout from "../components/layout/layout";
 
-export default function Home() {
+export default function Home({ header }) {
   return (
-    <Layout>
-      <HomeContent />
-    </Layout>
+    <HomeContent />
   );
 }
+
+

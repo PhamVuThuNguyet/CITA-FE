@@ -4,7 +4,7 @@ import styles from "../../styles/Layout.module.css";
 import Header from "../../components/header/header";
 import Footer from "../../components/footer/footer";
 
-export default function Layout({children}) {
+export default function Layout({children, headerData, footerData}) {
   return (
     <>
       <Head>
@@ -36,7 +36,7 @@ export default function Layout({children}) {
       <main className={styles.main}>{children}</main>
 
       <footer>
-        <Footer />
+        <Footer data={footerData} />
       </footer>
     </>
   );

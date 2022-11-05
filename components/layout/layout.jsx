@@ -1,10 +1,11 @@
-import Head from "next/head";
-import styles from "../../styles/Layout.module.css";
+import Head from 'next/head';
+import styles from '../../styles/Layout.module.css';
 
-import Header from "../../components/header/header";
-import Footer from "../../components/footer/footer";
+import Header from '../../components/header/header';
+import Footer from '../../components/footer/footer';
+import NavBar from '../header/navbar';
 
-export default function Layout({children, headerData, footerData}) {
+export default function Layout({ children, headerData, footerData }) {
   return (
     <>
       <Head>
@@ -13,27 +14,36 @@ export default function Layout({children, headerData, footerData}) {
           lĩnh vực
         </title>
         <meta
-          name='description'
-          content='The Conference on Information Technology and Its Applications'
+          name="description"
+          content="The Conference on Information Technology and Its Applications"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat"
+          rel="stylesheet"
         />
         <link
-          rel='icon'
-          href='/favicon.ico'
-        />
+          href="https://fonts.googleapis.com/css?family=EB Garamond"
+          rel="stylesheet"
+        ></link>
         <link
-          href='https://fonts.googleapis.com/css?family=Montserrat'
-          rel='stylesheet'
-        />
-        <link
-          href='https://fonts.googleapis.com/css?family=EB Garamond'
-          rel='stylesheet'></link>
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        ></link>
       </Head>
 
       <header>
+        <NavBar data={headerData} />
         <Header />
       </header>
 
-      <main className={styles.main}>{children}</main>
+      <main className={styles.main}>
+        <div className="flex w-full min-h-screen bg-[#FFEFD1] py-12 px-32 gap-8">
+          <div className="w-2/3 text-center bg-slate-400">{children}</div>
+
+          <div className="w-1/3 text-center bg-gray-400">RIGHT</div>
+        </div>
+      </main>
 
       <footer>
         <Footer data={footerData} />

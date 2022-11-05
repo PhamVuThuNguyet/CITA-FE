@@ -1,4 +1,4 @@
-import styles from "./styles.module.scss";
+import styles from "../../styles/Footer.module.scss";
 import { convertArrayToObject } from '../../utils';
 
 export default function Footer({ data }) {

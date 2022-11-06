@@ -4,7 +4,7 @@
   text-align: center;
 }
 
-.content {
+.header__content {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -14,20 +14,38 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 5rem;
 }
-.title {
+.header__title {
   margin: 0;
   line-height: 2;
   font-size: 3rem;
   font-family: Futura;
   color: #ffc452;
   font-weight: bold;
+  text-transform: uppercase;
 }
-.sub_title {
+.header__sub_title {
   font-family: Montserrat;
   line-height: 1;
   font-size: 2rem;
   color: white;
   font-weight: bold;
   letter-spacing: 0.055rem;
+  text-transform: uppercase;
+}
+.header__time{
+  font-family: 'EB Garamond';
+  color: white;
+  font-size: 2rem;
+  margin-top: 5rem;
+}
+.header__submit_button{
+  padding: 1rem 5rem;
+  background-color: #C92335;
+  color: #FFEFD1;
+  font-family: 'EB Garamond';
+  border-radius: 10px;
+  font-size: 2rem;
+  margin-top: 3rem;
 }

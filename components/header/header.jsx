@@ -1,8 +1,10 @@
 import styles from '../../styles/Header.module.css';
 import Image from 'next/future/image';
 import banner from '../../public/banner.jpg';
+import { convertArrayToObject } from '../../utils';
 
-export default function Header() {
+export default function Header({ data }) {
+  const bannerData = convertArrayToObject(data.elements);
   return (
     <div className={styles.header}>
       <div>
@@ -16,11 +18,22 @@ export default function Header() {
           alt="Banner"
         />
 
-        <div className={styles.content}>
-          <p className={styles.title}>HỘI THẢO KHOA HỌC QUỐC GIA - CITA 2023</p>
-          <p className={styles.sub_title}>
-            CÔNG NGHỆ THÔNG TIN VÀ ỨNG DỤNG TRONG CÁC LĨNH VỰC
-          </p>
+        <div className={styles.header__content}>
+          <div
+            className={styles.header__title}
+            dangerouslySetInnerHTML={{ __html: bannerData.Home_Banner_Title }}
+          ></div>
+          <div
+            className={styles.header__sub_title}
+            dangerouslySetInnerHTML={{ __html: bannerData.Home_Banner_SubTitle }}
+          ></div>
+          <div
+            className={styles.header__time}
+            dangerouslySetInnerHTML={{ __html: bannerData.Home_Banner_Time }}
+          ></div>
+          <button className={styles.header__submit_button}
+          dangerouslySetInnerHTML={{__html: bannerData.Home_Banner_Call_Button}}>
+          </button>
         </div>
       </div>
     </div>

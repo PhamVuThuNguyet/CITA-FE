@@ -2,7 +2,7 @@ import { convertArrayToObject } from '../../utils';
 import styles from '../../styles/NavBar.module.css';
 import { useEffect, useState } from 'react';
 export default function NavBar({ data }) {
-  const headerData = convertArrayToObject(data.elements);
+  const navData = convertArrayToObject(data.elements);
   const [color, setColor] = useState(false);
   const changeColor = () => {
     if (window.scrollY > 0) {
@@ -20,34 +20,31 @@ export default function NavBar({ data }) {
   });
   return (
     <div
-      className={styles.navbar} style={{backgroundColor: color?'#374F8A':'transparent'}}
+      className={styles.navbar}
+      style={{ backgroundColor: color ? '#374F8A' : 'transparent' }}
     >
       <div className={styles.navbar__item}>
         <div
-          dangerouslySetInnerHTML={{ __html: headerData.Header_Information }}
+          dangerouslySetInnerHTML={{ __html: navData.Header_Information }}
         ></div>
         <i class="fa fa-caret-down"></i>
       </div>
       <div className={styles.navbar__item}>
-        <div
-          dangerouslySetInnerHTML={{ __html: headerData.Header_Program }}
-        ></div>
+        <div dangerouslySetInnerHTML={{ __html: navData.Header_Program }}></div>
         <i class="fa fa-caret-down"></i>
       </div>
       <div
-        dangerouslySetInnerHTML={{ __html: headerData.Header_Logo }}
+        dangerouslySetInnerHTML={{ __html: navData.Header_Logo }}
         className={styles['navbar__main-logo']}
       ></div>
       <div className={styles.navbar__item}>
         <div
-          dangerouslySetInnerHTML={{ __html: headerData.Header_Submition }}
+          dangerouslySetInnerHTML={{ __html: navData.Header_Submition }}
         ></div>
         <i class="fa fa-caret-down"></i>
       </div>
       <div className={styles.navbar__item}>
-        <div
-          dangerouslySetInnerHTML={{ __html: headerData.Header_Support }}
-        ></div>
+        <div dangerouslySetInnerHTML={{ __html: navData.Header_Support }}></div>
         <i class="fa fa-caret-down"></i>
       </div>
     </div>

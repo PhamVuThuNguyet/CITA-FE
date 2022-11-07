@@ -10,6 +10,7 @@
   font-weight: bold;
   max-width: 15%;
   font-size: 1rem;
+  animation: fadein-top 1s;
 }
 
 .header__content {
@@ -26,6 +27,7 @@
 }
 .header__title {
   margin: 0;
+  margin-top: 1rem;
   line-height: 2;
   font-family: Futura;
   color: #ffc452;
@@ -33,6 +35,7 @@
   text-transform: uppercase;
   font-size: 36px;
   line-height: 36px;
+  animation: fadein-top 1s;
 }
 .header__sub_title {
   font-family: Montserrat;
@@ -44,14 +47,19 @@
   font-size: 24px;
   line-height: 30px;
   margin-top: 16px;
+  animation: fadein-bot 1s;
+
 }
 .header__time {
   font-family: 'EB Garamond';
   color: white;
   margin-top: 60px;
   font-size: 24px;
+  animation: fadein-left 1s;
 }
 .header__submit_button{
+  position: relative;
+  z-index: 1;
   padding: 16px 60px;
   background-color: #C92335;
   color: #FFEFD1;
@@ -60,4 +68,49 @@
   font-size: 20px;
   margin-top: 32px;
   margin-bottom: 100px;
+  transition: all 0.32s ease-in;
+  animation: fadein-right 1s;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 10px;
+    background-color: #FFEFD1;
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform 0.25s ease-in-out;
+  }
+  &:hover {
+    cursor: pointer;
+    color: #C92335;
+    scale: 1.2;
+  }
+  &:hover::before {
+    transform-origin: center left;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fadein-top {
+  from { opacity: 0; transform: translateY(-20%);}
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadein-bot {
+  from { opacity: 0; transform: translateY(20%);}
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadein-left {
+  from { opacity: 0; transform: translateX(-20%);}
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadein-right {
+  from { opacity: 0; transform: translateX(+20%);}
+  to   { opacity: 1; transform: translateX(0); }
 }

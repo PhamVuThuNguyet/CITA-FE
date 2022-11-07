@@ -6,6 +6,11 @@ export const GET_HEADER = gql`
       elements {
         name
         value
+        content (sortBy: order_ASC) {
+          name
+          value
+          url
+        }
       }
     }
   }
@@ -23,9 +28,36 @@ export const GET_FOOTER = gql`
 `;
 
 export const GET_BANNER = gql`
+  query getBanner {
+    allLayouts(where: { name: "Banner" }) {
+      elements {
+        name
+        value
+        image {
+          publicUrl
+        }
+      }
+    }
+  }
+`;
 
-    query getBanner {
-      allLayouts(where: { name: "Banner" }) {
+export const GET_SIDEBAR = gql`
+  query getSidebar {
+    allLayouts(where: { name: "Home_Timeline" }) {
+      elements {
+        name
+        value
+        url
+      }
+    }
+  }
+`;
+
+export const GET_HOME = gql`
+  query getHome {
+    allPages(where: { name: "Home" }) {
+      layouts {
+        name
         elements {
           name
           value
@@ -33,16 +65,6 @@ export const GET_BANNER = gql`
             publicUrl
           }
         }
-      }
-    }
-`;
-
-export const GET_TIMELINE = gql`
-  query getTimeline {
-    allLayouts(where: { name: "Home_Timeline" }) {
-      elements {
-        name
-        value
       }
     }
   }

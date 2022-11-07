@@ -27,11 +27,23 @@ export default function NavBar({ data }) {
         <div
           dangerouslySetInnerHTML={{ __html: navData.Header_Information.value }}
         ></div>
-        <i class="fa fa-caret-down"></i>
+        <i className="fa fa-caret-down"></i>
+        <div className={styles.navbar_sub_item}>
+          {navData.Header_Information.content.map(item => (
+            <a key={item.name} href={item.url} dangerouslySetInnerHTML={{ __html: item.value }}></a>
+          ))}
+        </div>
       </div>
       <div className={styles.navbar__item}>
-        <div dangerouslySetInnerHTML={{ __html: navData.Header_Program.value }}></div>
-        <i class="fa fa-caret-down"></i>
+        <div
+          dangerouslySetInnerHTML={{ __html: navData.Header_Program.value }}
+        ></div>
+        <i className="fa fa-caret-down"></i>
+        <div className={styles.navbar_sub_item}>
+          {navData.Header_Program.content.map(item => (
+            <a key={item.name} href={item.url} dangerouslySetInnerHTML={{ __html: item.value }}></a>
+          ))}
+        </div>
       </div>
       <a href="/">
         <div
@@ -43,11 +55,23 @@ export default function NavBar({ data }) {
         <div
           dangerouslySetInnerHTML={{ __html: navData.Header_Submition.value }}
         ></div>
-        <i class="fa fa-caret-down"></i>
+        <i className="fa fa-caret-down"></i>
+        <div className={styles.navbar_sub_item}>
+          {navData.Header_Submition.content.map(item => (
+            <a key={item.name} href={item.url} dangerouslySetInnerHTML={{ __html: item.value }}></a>
+          ))}
+        </div>
       </div>
       <div className={styles.navbar__item}>
-        <div dangerouslySetInnerHTML={{ __html: navData.Header_Support.value }}></div>
-        <i class="fa fa-caret-down"></i>
+        <div
+          dangerouslySetInnerHTML={{ __html: navData.Header_Support.value }}
+        ></div>
+        <i className="fa fa-caret-down"></i>
+        <div className={styles.navbar_sub_item}>
+          {navData.Header_Support.content.map(item => (
+            <a key={item.name} href={item.url} dangerouslySetInnerHTML={{ __html: item.value }}></a>
+          ))}
+        </div>
       </div>
     </div>
   );

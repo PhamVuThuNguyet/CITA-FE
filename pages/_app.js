@@ -1,8 +1,8 @@
 import { ApolloProvider } from '@apollo/client';
 import App from 'next/app';
-import client from '../apollo-client';
 import Layout from '../components/layout/layout';
-import { GET_HEADER, GET_FOOTER, GET_BANNER, GET_TIMELINE } from '../graphql/queries';
+import client from '../apollo-client';
+import { GET_HEADER, GET_FOOTER, GET_BANNER, GET_SIDEBAR } from '../graphql/queries';
 import '../styles/globals.css';
 
 export default function MyApp({
@@ -23,7 +23,7 @@ export default function MyApp({
 }
 
 MyApp.getInitialProps = async (ctx) => {
-  const [header, footer, banner] = await Promise.allSettled([
+  const [header, footer, banner, timeline] = await Promise.allSettled([
     client.query({
       query: GET_HEADER,
     }),
@@ -33,11 +33,8 @@ MyApp.getInitialProps = async (ctx) => {
     client.query({
       query: GET_BANNER,
     }),
-  ]);
-
-  const [timeline] = await Promise.allSettled([
     client.query({
-      query: GET_TIMELINE,
+      query: GET_SIDEBAR,
     })
   ]);
 

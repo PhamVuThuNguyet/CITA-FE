@@ -4,7 +4,6 @@ import { convertArrayToObject } from '../../utils';
 
 export default function Banner({ data }) {
   const bannerData = convertArrayToObject(data.elements);
-  console.log(data, bannerData);
   return (
     <div className={styles.header}>
       <div>
@@ -21,22 +20,35 @@ export default function Banner({ data }) {
         />
 
         <div className={styles.header__content}>
-          <div className={styles["header__conf-name"]}>The 12th Conference on Information Technology and Its Application</div>
-          <div
-            className={styles.header__title}
-            dangerouslySetInnerHTML={{ __html: bannerData.Banner_Title.value }}
-          ></div>
-          <div
-            className={styles.header__sub_title}
-            dangerouslySetInnerHTML={{ __html: bannerData.Banner_SubTitle.value }}
-          ></div>
-          <div
-            className={styles.header__time}
-            dangerouslySetInnerHTML={{ __html: bannerData.Banner_Time.value }}
-          ></div>
-          <button className={styles.header__submit_button}
-          dangerouslySetInnerHTML={{__html: bannerData.Banner_Call_Button.value }}>
-          </button>
+          <div className={styles['header__conf-name']}>
+            The 12th Conference on Information Technology and Its Application
+          </div>
+          <div>
+            <div
+              className={styles.header__title}
+              dangerouslySetInnerHTML={{
+                __html: bannerData.Banner_Title.value,
+              }}
+            ></div>
+            <div
+              className={styles.header__sub_title}
+              dangerouslySetInnerHTML={{
+                __html: bannerData.Banner_SubTitle.value,
+              }}
+            ></div>
+          </div>
+          <div>
+            <div
+              className={styles.header__time}
+              dangerouslySetInnerHTML={{ __html: bannerData.Banner_Time.value }}
+            ></div>
+            <button
+              className={styles.header__submit_button}
+              dangerouslySetInnerHTML={{
+                __html: bannerData.Banner_Call_Button.value,
+              }}
+            ></button>
+          </div>
         </div>
       </div>
     </div>

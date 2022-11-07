@@ -12,7 +12,7 @@ export default function Layout({
   headerData,
   footerData,
   bannerData,
-  timelineData,
+  sidebarData,
 }) {
   return (
     <>
@@ -54,7 +54,7 @@ export default function Layout({
           <div className="w-2/3 text-center">{children}</div>
 
           <div className="w-1/3 text-center">
-            <SideBar timelineData={timelineData} />
+            <SideBar data={sidebarData} />
           </div>
         </div>
       </main>

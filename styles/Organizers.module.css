@@ -4,7 +4,7 @@
 }
 .organizers__title {
   background-color: #c92335;
-  font-size: 36px;
+  font-size: 3.6rem;
   color: #ffc452;
   font-weight: bold;
   font-family: Montserrat;
@@ -14,10 +14,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 4.5rem 0;
   max-width: 70%;
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 4rem;
 }

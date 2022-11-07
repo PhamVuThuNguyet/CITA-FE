@@ -11,11 +11,11 @@ export default function MyApp({
   header,
   footer,
   banner,
-  timeline
+  sidebar
 }) {
   return (
     <ApolloProvider client={client}>
-      <Layout headerData={header} footerData={footer} bannerData={banner} timelineData={timeline}>
+      <Layout headerData={header} footerData={footer} bannerData={banner} sidebarData={sidebar}>
         <Component {...pageProps} />
       </Layout>
     </ApolloProvider>
@@ -23,7 +23,7 @@ export default function MyApp({
 }
 
 MyApp.getInitialProps = async (ctx) => {
-  const [header, footer, banner, timeline] = await Promise.allSettled([
+  const [header, footer, banner, sidebar] = await Promise.allSettled([
     client.query({
       query: GET_HEADER,
     }),
@@ -44,6 +44,6 @@ MyApp.getInitialProps = async (ctx) => {
     header: header.value.data.allLayouts[0],
     footer: footer.value.data.allLayouts[0],
     banner: banner.value.data.allLayouts[0],
-    timeline: timeline.value.data.allLayouts[0]
+    sidebar: sidebar.value.data.allLayouts[0]
   };
 };

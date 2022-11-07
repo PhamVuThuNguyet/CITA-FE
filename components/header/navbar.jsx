@@ -19,7 +19,7 @@ export default function NavBar({ data }) {
     };
   });
   return (
-    <div
+    <nav
       className={styles.navcont}
       style={{ backgroundColor: color ? '#374F8A' : 'transparent' }}
     >
@@ -54,6 +54,6 @@ export default function NavBar({ data }) {
           <i class="fa fa-caret-down"></i>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }

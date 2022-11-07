@@ -1,0 +1,20 @@
+.section_title{
+    color: white;
+    font-family: Montserrat;
+    background-color: #374F8A;
+    border-left: 1rem solid #F7961E;
+    padding: 1rem 1rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.section_content{
+    padding: 1rem 1rem;
+    text-align: justify;
+    font-family: Montserrat;
+    p{
+        margin-bottom: 2rem;
+    }
+}

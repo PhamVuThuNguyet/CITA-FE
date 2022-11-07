@@ -5,6 +5,7 @@ import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import NavBar from '../header/navbar';
 import Organizer from '../footer/organizers';
+import ItemLayout from './item-layout';
 
 export default function Layout({
   children,
@@ -25,7 +26,7 @@ export default function Layout({
         />
         <link rel="icon" href="/favicon.ico" />
         <link
-          href="https://fonts.googleapis.com/css?family=Montserrat"
+          href="https://fonts.cdnfonts.com/css/montserrat"
           rel="stylesheet"
         />
         <link
@@ -49,14 +50,16 @@ export default function Layout({
 
       <main className={styles.main}>
         <div className="flex w-full min-h-screen bg-[#FFEFD1] py-12 px-32 gap-8">
-          <div className="w-2/3 text-center bg-slate-400">{children}</div>
+          <div className="w-2/3 text-center bg-slate-400">
+            {children}
+          </div>
 
           <div className="w-1/3 text-center bg-gray-400">RIGHT</div>
         </div>
       </main>
 
       <footer>
-        <Organizer/>
+        <Organizer />
         <Footer data={footerData} />
       </footer>
     </>

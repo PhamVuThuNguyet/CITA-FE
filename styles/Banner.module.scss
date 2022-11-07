@@ -23,6 +23,7 @@
   justify-content: center;
   flex-direction: column;
   padding-top: 5rem;
+  animation: fadein 1s;
 }
 .header__title {
   margin: 0;
@@ -52,6 +53,8 @@
   font-size: 24px;
 }
 .header__submit_button{
+  position: relative;
+  z-index: 1;
   padding: 16px 60px;
   background-color: #C92335;
   color: #FFEFD1;
@@ -59,4 +62,33 @@
   border-radius: 10px;
   font-size: 20px;
   margin-top: 32px;
+  transition: all 0.32s ease-in;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 10px;
+    background-color: #FFEFD1;
+    transform-origin: center right;
+    transform: scaleX(0);
+    transition: transform 0.25s ease-in-out;
+  }
+  &:hover {
+    cursor: pointer;
+    color: #C92335;
+    scale: 1.2;
+  }
+  &:hover::before {
+    transform-origin: center left;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(-100px);}
+  to   { opacity: 1; transform: translateY(0px); }
 }

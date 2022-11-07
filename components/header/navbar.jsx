@@ -20,34 +20,39 @@ export default function NavBar({ data }) {
   });
   return (
     <div
-      className={styles.navbar}
+      className={styles.navcont}
       style={{ backgroundColor: color ? '#374F8A' : 'transparent' }}
     >
-      <div className={styles.navbar__item}>
-        <div
-          dangerouslySetInnerHTML={{ __html: navData.Header_Information.value }}
-        ></div>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div className={styles.navbar__item}>
-        <div dangerouslySetInnerHTML={{ __html: navData.Header_Program.value }}></div>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <a href="/">
-        <div
-          dangerouslySetInnerHTML={{ __html: navData.Header_Logo.value }}
-          className={styles['navbar__main-logo']}
-        ></div>
-      </a>
-      <div className={styles.navbar__item}>
-        <div
-          dangerouslySetInnerHTML={{ __html: navData.Header_Submition.value }}
-        ></div>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div className={styles.navbar__item}>
-        <div dangerouslySetInnerHTML={{ __html: navData.Header_Support.value }}></div>
-        <i class="fa fa-caret-down"></i>
+      <div
+        className={styles.navbar}
+        style={{ width: color ? '100%' : '80%' }}
+      >
+        <div className={styles.navbar__item}>
+          <div
+            dangerouslySetInnerHTML={{ __html: navData.Header_Information.value }}
+          ></div>
+          <i class="fa fa-caret-down"></i>
+        </div>
+        <div className={styles.navbar__item}>
+          <div dangerouslySetInnerHTML={{ __html: navData.Header_Program.value }}></div>
+          <i class="fa fa-caret-down"></i>
+        </div>
+        <a href="/">
+          <div
+            dangerouslySetInnerHTML={{ __html: navData.Header_Logo.value }}
+            className={styles['navbar__main-logo']}
+          ></div>
+        </a>
+        <div className={styles.navbar__item}>
+          <div
+            dangerouslySetInnerHTML={{ __html: navData.Header_Submition.value }}
+          ></div>
+          <i class="fa fa-caret-down"></i>
+        </div>
+        <div className={styles.navbar__item}>
+          <div dangerouslySetInnerHTML={{ __html: navData.Header_Support.value }}></div>
+          <i class="fa fa-caret-down"></i>
+        </div>
       </div>
     </div>
   );

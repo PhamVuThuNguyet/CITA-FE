@@ -13,7 +13,6 @@ export default function SideBar({timelineData}){
                 target="_blank" 
                 dangerouslySetInnerHTML={{ __html: sidebar.Sidebar_Submit_Button.value }}
             >
-                
             </a>
         </ItemLayout>
         <ItemLayout section_title={sidebar.Sidebar_Previous_Title.value} section_content={sidebar.Sidebar_Previous_Content.value}/>

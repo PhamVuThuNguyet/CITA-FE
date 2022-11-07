@@ -24,10 +24,13 @@ export const GET_FOOTER = gql`
 
 export const GET_BANNER = gql`
   query getBanner {
-    allLayouts(where: { name: "Home_Banner" }) {
+    allLayouts(where: { name: "Banner" }) {
       elements {
         name
         value
+        image {
+          publicUrl
+        }
       }
     }
   }

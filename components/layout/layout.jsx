@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import styles from '../../styles/Layout.module.css';
 
-import Header from '../../components/header/header';
+import Banner from '../../components/header/banner';
 import Footer from '../../components/footer/footer';
 import NavBar from '../header/navbar';
 import Organizer from '../footer/organizers';
-import ItemLayout from './item-layout';
 
 export default function Layout({
   children,
@@ -45,7 +44,7 @@ export default function Layout({
 
       <header>
         <NavBar data={headerData} />
-        <Header data={bannerData} />
+        <Banner data={bannerData} />
       </header>
 
       <main className={styles.main}>

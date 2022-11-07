@@ -1,5 +1,5 @@
 import { convertArrayToObject } from '../../utils';
-import styles from '../../styles/NavBar.module.css';
+import styles from '../../styles/NavBar.module.scss';
 import { useEffect, useState } from 'react';
 export default function NavBar({ data }) {
   const navData = convertArrayToObject(data.elements);
@@ -33,10 +33,12 @@ export default function NavBar({ data }) {
         <div dangerouslySetInnerHTML={{ __html: navData.Header_Program }}></div>
         <i class="fa fa-caret-down"></i>
       </div>
-      <div
-        dangerouslySetInnerHTML={{ __html: navData.Header_Logo }}
-        className={styles['navbar__main-logo']}
-      ></div>
+      <a href="/">
+        <div
+          dangerouslySetInnerHTML={{ __html: navData.Header_Logo }}
+          className={styles['navbar__main-logo']}
+        ></div>
+      </a>
       <div className={styles.navbar__item}>
         <div
           dangerouslySetInnerHTML={{ __html: navData.Header_Submition }}

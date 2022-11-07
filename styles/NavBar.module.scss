@@ -15,6 +15,7 @@
   z-index: 999;
   padding: 0.5rem;
   transition: width 0.3s ease-out;
+  animation: fadein 0.5s ease-in;
 }
 .navbar__main-logo {
   color: #ffefd1;
@@ -35,10 +36,10 @@
     top: -50%;
     bottom: -50%;
     width: 1.25em;
-    transform: translate3d(-525%, 0, 0) rotate(35deg);
+    transform: translate3d(-300%, 0, 0) rotate(35deg);
   }
   &:hover::after {
-    transition: transform 1s ease-in-out;
+    transition: transform 0.3s ease-in;
     transform: translate3d(200%, 0, 0) rotate(35deg);
   }
 
@@ -68,4 +69,9 @@
     font-size: 18px;
   }
   justify-content: center;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

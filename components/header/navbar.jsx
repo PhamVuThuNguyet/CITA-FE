@@ -25,7 +25,7 @@ export default function NavBar({ data }) {
     >
       <div
         className={styles.navbar}
-        style={{ width: color ? '100%' : '80%' }}
+        style={{ width: color ? '100%' : '80%', backgroundColor: color ? '#374F8A' : 'transparent'  }}
       >
         <div className={styles.navbar__item}>
           <div

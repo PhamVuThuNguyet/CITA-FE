@@ -6,7 +6,7 @@ export const GET_HEADER = gql`
       elements {
         name
         value
-        content (sortBy: order_ASC) {
+        content(sortBy: order_ASC) {
           name
           value
           url
@@ -48,6 +48,20 @@ export const GET_SIDEBAR = gql`
         name
         value
         url
+      }
+    }
+  }
+`;
+
+export const GET_ORGANIZER = gql`
+  query getFooter {
+    allLayouts(where: { name: "Organizer" }) {
+      elements(sortBy: order_ASC) {
+        name
+        value
+        image {
+          publicUrl
+        }
       }
     }
   }

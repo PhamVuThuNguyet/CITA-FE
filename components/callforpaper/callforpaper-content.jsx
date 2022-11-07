@@ -1,7 +1,7 @@
 import ItemLayout from '../layout/item-layout';
-import styles from '../../styles/Program.module.scss';
+import styles from '../../styles/Callforpaper.module.scss';
 
-const ProgramContent = () => {
+const CallforpaperContent = () => {
     return (
         <>
             <ItemLayout section_title={"Thông tin chung"} section_content={
@@ -13,4 +13,4 @@ const ProgramContent = () => {
     );
 }
 
-export default ProgramContent;
+export default CallforpaperContent;

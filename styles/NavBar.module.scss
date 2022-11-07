@@ -9,7 +9,7 @@
   justify-content: center;
   color: white;
   z-index: 999;
-  padding: 0.5rem;
+  padding: 20px 0px;
 }
 .navbar__main-logo {
   color: #ffefd1;
@@ -41,4 +41,5 @@
     font-size: 18px;
   }
   justify-content: center;
+  min-width: 120px;
 }

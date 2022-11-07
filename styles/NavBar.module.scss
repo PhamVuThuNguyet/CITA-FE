@@ -6,7 +6,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   color: white;
   z-index: 999;
   padding: 0.5rem;
@@ -18,16 +18,27 @@
   font-size: 3rem;
   line-height: 3rem;
   cursor: pointer;
+  margin: 0 24px;
+  > p {
+    font-size: 36px;
+    line-height: 36px;
+  }
   flex: 1;
   text-align: center;
 }
 .navbar__item {
+  margin: 0 24px;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
   font-size: 1.3rem;
   font-family: 'EB Garamond';
-  flex: 1;
+  > div > p {
+    font-size: 18px;
+  }
+  > div > i {
+    font-size: 18px;
+  }
   justify-content: center;
 }

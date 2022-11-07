@@ -27,33 +27,36 @@
 .header__title {
   margin: 0;
   line-height: 2;
-  font-size: 3rem;
   font-family: Futura;
   color: #ffc452;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 36px;
+  line-height: 36px;
 }
 .header__sub_title {
   font-family: Montserrat;
   line-height: 1;
-  font-size: 2rem;
   color: white;
   font-weight: bold;
   letter-spacing: 0.055rem;
   text-transform: uppercase;
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 16px;
 }
 .header__time {
   font-family: 'EB Garamond';
   color: white;
-  font-size: 2rem;
-  margin-top: 5rem;
+  margin-top: 60px;
+  font-size: 24px;
 }
-.header__submit_button {
-  padding: 1rem 5rem;
-  background-color: #c92335;
-  color: #ffefd1;
+.header__submit_button{
+  padding: 16px 60px;
+  background-color: #C92335;
+  color: #FFEFD1;
   font-family: 'EB Garamond';
   border-radius: 10px;
-  font-size: 2rem;
-  margin-top: 3rem;
+  font-size: 20px;
+  margin-top: 32px;
 }

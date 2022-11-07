@@ -5,7 +5,6 @@ import Header from '../../components/header/header';
 import Footer from '../../components/footer/footer';
 import NavBar from '../header/navbar';
 import Organizer from '../footer/organizers';
-import ItemLayout from './item-layout';
 
 export default function Layout({
   children,

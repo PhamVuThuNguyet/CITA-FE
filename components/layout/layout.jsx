@@ -5,12 +5,14 @@ import Banner from '../../components/header/banner';
 import Footer from '../../components/footer/footer';
 import NavBar from '../header/navbar';
 import Organizer from '../footer/organizers';
+import SideBar from '../sidebar/sidebar';
 
 export default function Layout({
   children,
   headerData,
   footerData,
   bannerData,
+  timelineData,
 }) {
   return (
     <>
@@ -49,11 +51,11 @@ export default function Layout({
 
       <main className={styles.main}>
         <div className="flex w-full min-h-screen bg-[#FFEFD1] py-12 px-32 gap-8">
-          <div className="w-2/3 text-center bg-slate-400">
-            {children}
-          </div>
+          <div className="w-2/3 text-center bg-slate-400">{children}</div>
 
-          <div className="w-1/3 text-center bg-gray-400">RIGHT</div>
+          <div className="w-1/3 text-center">
+            <SideBar timelineData={timelineData} />
+          </div>
         </div>
       </main>
 

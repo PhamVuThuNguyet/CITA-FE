@@ -1,11 +1,21 @@
 import { convertArrayToObject } from "../../utils";
 import ItemLayout from "../layout/item-layout";
+import styles from '../../styles/Layout.module.css';
 
 export default function SideBar({timelineData}){
-    const timeline = convertArrayToObject(timelineData.elements);
+    const sidebar = convertArrayToObject(timelineData.elements);
     return (<div>
-        <ItemLayout section_title={timeline.Home_Timeline_Title.value} section_content={timeline.Home_Timeline_Content.value}/>
-        <ItemLayout/>
-        <ItemLayout/>
+        <ItemLayout section_title={sidebar.Home_Timeline_Title.value} section_content={sidebar.Home_Timeline_Content.value}/>
+        <ItemLayout section_title={sidebar.Sidebar_Submit_Title.value} section_content={sidebar.Sidebar_Submit_Content.value}> 
+            <a 
+                className={styles['sidebar-submit-btn']}
+                href={sidebar.Sidebar_Submit_Button.url} 
+                target="_blank" 
+                dangerouslySetInnerHTML={{ __html: sidebar.Sidebar_Submit_Button.value }}
+            >
+                
+            </a>
+        </ItemLayout>
+        <ItemLayout section_title={sidebar.Sidebar_Previous_Title.value} section_content={sidebar.Sidebar_Previous_Content.value}/>
     </div>);
 }

@@ -23,8 +23,19 @@ export const GET_FOOTER = gql`
 `;
 
 export const GET_BANNER = gql`
-  query getBanner {
-    allLayouts(where: { name: "Home_Banner" }) {
+    query getBanner {
+      allLayouts(where: { name: "Banner" }) {
+        elements {
+          name
+          value
+        }
+      }
+    }
+`;
+
+export const GET_TIMELINE = gql`
+  query getTimeline {
+    allLayouts(where: { name: "Home_Timeline" }) {
       elements {
         name
         value

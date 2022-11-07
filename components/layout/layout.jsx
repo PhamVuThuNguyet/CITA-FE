@@ -12,8 +12,8 @@ export default function Layout({
   headerData,
   footerData,
   bannerData,
-  organizer
   sidebarData,
+  organizer
 }) {
   return (
     <>

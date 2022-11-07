@@ -16,7 +16,7 @@ export default function MyApp({
 }) {
   return (
     <ApolloProvider client={client}>
-      <Layout headerData={header} footerData={footer} bannerData={banner} timelineData={sidebar} organizer={organizer}>
+      <Layout headerData={header} footerData={footer} bannerData={banner} sidebarData={sidebar} organizer={organizer}>
         <Component {...pageProps} />
       </Layout>
     </ApolloProvider>

@@ -20,7 +20,7 @@ export default function NavBar({ data }) {
   });
   return (
     <nav
-      className={styles.navcont}
+      className={styles.navbar}
       style={{ backgroundColor: color ? '#374F8A' : 'transparent' }}
     >
       <div className={styles.navbar__item}>

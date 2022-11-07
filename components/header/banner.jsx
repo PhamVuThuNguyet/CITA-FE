@@ -4,11 +4,14 @@ import { convertArrayToObject } from '../../utils';
 
 export default function Banner({ data }) {
   const bannerData = convertArrayToObject(data.elements);
+  console.log(data, bannerData);
   return (
     <div className={styles.header}>
       <div>
         <Image
-          src={banner}
+          src={bannerData.Banner_Image?.image?.publicUrl}
+          width={100}
+          height={100}
           style={{
             width: '100%',
             maxWidth: '100%',
@@ -18,20 +21,21 @@ export default function Banner({ data }) {
         />
 
         <div className={styles.header__content}>
+          <div className={styles["header__conf-name"]}>The 12th Conference on Information Technology and Its Application</div>
           <div
             className={styles.header__title}
-            dangerouslySetInnerHTML={{ __html: bannerData.Banner_Title }}
+            dangerouslySetInnerHTML={{ __html: bannerData.Banner_Title.value }}
           ></div>
           <div
             className={styles.header__sub_title}
-            dangerouslySetInnerHTML={{ __html: bannerData.Banner_SubTitle }}
+            dangerouslySetInnerHTML={{ __html: bannerData.Banner_SubTitle.value }}
           ></div>
           <div
             className={styles.header__time}
-            dangerouslySetInnerHTML={{ __html: bannerData.Banner_Time }}
+            dangerouslySetInnerHTML={{ __html: bannerData.Banner_Time.value }}
           ></div>
           <button className={styles.header__submit_button}
-          dangerouslySetInnerHTML={{__html: bannerData.Banner_Call_Button}}>
+          dangerouslySetInnerHTML={{__html: bannerData.Banner_Call_Button.value }}>
           </button>
         </div>
       </div>

@@ -3,6 +3,14 @@
   width: 100%;
   text-align: center;
 }
+.header__conf-name {
+  font-family: 'montserrat';
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  max-width: 15%;
+  font-size: 1rem;
+}
 
 .header__content {
   position: absolute;
@@ -37,7 +45,7 @@
   line-height: 30px;
   margin-top: 16px;
 }
-.header__time{
+.header__time {
   font-family: 'EB Garamond';
   color: white;
   margin-top: 60px;

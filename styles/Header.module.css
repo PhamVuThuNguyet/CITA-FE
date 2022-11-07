@@ -3,6 +3,14 @@
   width: 100%;
   text-align: center;
 }
+.header__conf-name {
+  font-family: 'montserrat';
+  color: white;
+  text-transform: capitalize;
+  font-weight: bold;
+  max-width: 15%;
+  font-size: 1rem;
+}
 
 .header__content {
   position: absolute;
@@ -34,16 +42,16 @@
   letter-spacing: 0.055rem;
   text-transform: uppercase;
 }
-.header__time{
+.header__time {
   font-family: 'EB Garamond';
   color: white;
   font-size: 2rem;
   margin-top: 5rem;
 }
-.header__submit_button{
+.header__submit_button {
   padding: 1rem 5rem;
-  background-color: #C92335;
-  color: #FFEFD1;
+  background-color: #c92335;
+  color: #ffefd1;
   font-family: 'EB Garamond';
   border-radius: 10px;
   font-size: 2rem;

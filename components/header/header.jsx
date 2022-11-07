@@ -19,6 +19,7 @@ export default function Header({ data }) {
         />
 
         <div className={styles.header__content}>
+          <div className={styles["header__conf-name"]}>The 12th Conference on Information Technology and Its Application</div>
           <div
             className={styles.header__title}
             dangerouslySetInnerHTML={{ __html: bannerData.Home_Banner_Title }}

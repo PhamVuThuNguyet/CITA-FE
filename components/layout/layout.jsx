@@ -12,7 +12,8 @@ export default function Layout({
   headerData,
   footerData,
   bannerData,
-  timelineData,
+  sidebarData,
+  organizer
 }) {
   return (
     <>
@@ -25,23 +26,6 @@ export default function Layout({
           name="description"
           content="The Conference on Information Technology and Its Applications"
         />
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.cdnfonts.com/css/montserrat"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css?family=EB Garamond"
-          rel="stylesheet"
-        ></link>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css?family=EB Garamond"
-          rel="stylesheet"
-        ></link>
       </Head>
 
       <header>
@@ -54,13 +38,13 @@ export default function Layout({
           <div className="w-2/3 text-center">{children}</div>
 
           <div className="w-1/3 text-center">
-            <SideBar timelineData={timelineData} />
+            <SideBar data={sidebarData} />
           </div>
         </div>
       </main>
 
       <footer>
-        <Organizer />
+        <Organizer organizer={organizer} />
         <Footer data={footerData} />
       </footer>
     </>

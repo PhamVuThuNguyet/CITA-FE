@@ -7,12 +7,3 @@
   align-items: center;
 }
 
-.sidebar-submit-btn {
-  display: inline-block;
-  padding: 16px 80px;
-  border-radius: 8px;
-  background: #C92335;
-  font-weight: bold;
-  color: #FFF;
-  margin-bottom: 16px;
-}

@@ -2,10 +2,10 @@
     color: white;
     font-family: Montserrat;
     background-color: #374F8A;
-    border-left: 1rem solid #F7961E;
-    padding: 10px 16px;
+    border-left: 1.6rem solid #F7961E;
+    padding: 1rem 1.6rem;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.8rem;
     text-align: left;
     text-transform: capitalize;
 }
@@ -14,7 +14,22 @@
     padding: 1rem 1rem;
     text-align: justify;
     font-family: Montserrat;
+    font-size: 1.6rem;
     p{
         margin-bottom: 1rem;
     }
 }
+
+
+.sidebar-submit-btn {
+    display: inline-block;
+    padding: 1.6rem 10rem;
+    border-radius: 1rem;
+    background: #C92335;
+    font-weight: bold;
+    color: #FFF;
+    margin-bottom: 1.6rem;
+    font-size: 2.4rem;
+    margin-top: 3.6rem;
+    margin-bottom: 2.4rem;
+  }

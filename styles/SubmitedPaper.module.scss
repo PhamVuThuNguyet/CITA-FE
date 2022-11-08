@@ -1,0 +1,17 @@
+.table {
+    width: 100%;
+    color: #FFEFD1;
+    font-size: 2rem;
+    tr:nth-child(even) {
+        background-color: #ffe7bc;
+      }
+    th, td {
+        border: 2px solid #374F8A;
+    }
+    th {
+        background-color: #374F8A;
+    }
+    td {
+        color: #374F8A;
+    }
+}

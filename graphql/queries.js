@@ -135,3 +135,18 @@ export const GET_CALL_FOR_PAPER = gql`
   }
 `;
 
+export const GET_SUBMITED_PAPER = gql`
+  query getPaper {
+    allLayouts(where: { name: "Submited_Paper" }) {
+      elements {
+        name
+        value        
+        content {
+          name
+          value
+        }
+      }
+    }
+  }
+`;
+

@@ -85,8 +85,25 @@ export const GET_HOME = gql`
 `;
 
 export const GET_RULE = gql`
-  query getHome {
+  query getRule {
     allPages(where: { name: "Rule" }) {
+      layouts {
+        name
+        elements {
+          name
+          value
+          image {
+            publicUrl
+          }
+        }
+      }
+    }
+  }
+`;
+
+export const GET_BOARDS = gql`
+  query getBoards {
+    allPages(where: { name: "Boards" }) {
       layouts {
         name
         elements {

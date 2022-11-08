@@ -44,6 +44,7 @@ export default function Banner({ data }) {
             ></div>
             <button
               className={styles.header__submit_button}
+              url={bannerData.Banner_Call_Button.url}
               dangerouslySetInnerHTML={{
                 __html: bannerData.Banner_Call_Button.value,
               }}

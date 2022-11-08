@@ -104,6 +104,22 @@ export const GET_RULE = gql`
 export const GET_BOARDS = gql`
   query getBoards {
     allPages(where: { name: "Boards" }) {
+layouts {
+        name
+        elements {
+          name
+          value
+          image {
+            publicUrl
+          }
+        }
+      }
+    }
+  }
+  `;
+export const GET_CALL_FOR_PAPER = gql`
+  query getCallForPaper {
+    allPages(where: { name: "Call_For_Paper" }) {
       layouts {
         name
         elements {
@@ -117,3 +133,4 @@ export const GET_BOARDS = gql`
     }
   }
 `;
+

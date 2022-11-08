@@ -83,3 +83,20 @@ export const GET_HOME = gql`
     }
   }
 `;
+
+export const GET_RULE = gql`
+  query getHome {
+    allPages(where: { name: "Rule" }) {
+      layouts {
+        name
+        elements {
+          name
+          value
+          image {
+            publicUrl
+          }
+        }
+      }
+    }
+  }
+`;

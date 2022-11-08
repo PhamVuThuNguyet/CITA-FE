@@ -1,8 +1,9 @@
 import CallforpaperContent from '../components/callforpaper/callforpaper-content';
-
-const Callforpaper = () => {
+import client from '../apollo-client';
+//todo: get data from query
+const Callforpaper = ({data}) => {
     return (
-        <CallforpaperContent/>
+        <CallforpaperContent data={data.layouts}/>
     )
 };
 

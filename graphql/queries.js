@@ -100,3 +100,20 @@ export const GET_RULE = gql`
     }
   }
 `;
+
+export const GET_CALL_FOR_PAPER = gql`
+  query getCallForPaper {
+    allPages(where: { name: "Call_For_Paper" }) {
+      layouts {
+        name
+        elements {
+          name
+          value
+          image {
+            publicUrl
+          }
+        }
+      }
+    }
+  }
+`;

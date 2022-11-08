@@ -72,7 +72,7 @@
   font-size: 2rem;
   margin-top: 3.2rem;
   margin-bottom: 10rem;
-  transition: all 0.32s ease-in;
+  transition: scale 0.2s ease-in;
   animation: fadein-right 1s;
   &::before {
     content: '';
@@ -96,6 +96,9 @@
   &:hover::before {
     transform-origin: center left;
     transform: scaleX(1);
+  }
+  &:active {
+    scale: 1;
   }
 }
 

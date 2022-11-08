@@ -15,15 +15,29 @@
     text-align: justify;
     font-family: Montserrat;
     font-size: 1.6rem;
+    color: rgb(39, 39, 39);
+    font-size: 1.5rem;
     p{
         margin-bottom: 1rem;
+        strong {
+            color: #C92335;
+        }    
+    }
+    ul {
+        list-style: inside;
+    }
+    a {
+        color: #C92335;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
 
 .sidebar-submit-btn {
     display: inline-block;
-    padding: 1.6rem 10rem;
+    padding: 1rem 7rem;
     border-radius: 1rem;
     background: #C92335;
     font-weight: bold;
@@ -32,4 +46,30 @@
     font-size: 2.4rem;
     margin-top: 3.6rem;
     margin-bottom: 2.4rem;
+    transition: scale 0.2s ease-in;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        border-radius: 1rem;
+        background-color: #F7961E;
+        transform-origin: center right;
+        transform: scaleX(0);
+        transition: transform 0.25s ease-in-out;
+      }
+      &:hover {
+        cursor: pointer;
+        scale: 1.2;
+      }
+      &:hover::before {
+        transform-origin: center left;
+        transform: scaleX(1);
+      }
+    &:active {
+        scale: 0.9;
+      }
   }

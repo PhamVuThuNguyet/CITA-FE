@@ -33,6 +33,7 @@ export const GET_BANNER = gql`
       elements {
         name
         value
+        url
         image {
           publicUrl
         }

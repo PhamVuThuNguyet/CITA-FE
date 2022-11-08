@@ -42,13 +42,15 @@ export default function Banner({ data }) {
               className={styles.header__time}
               dangerouslySetInnerHTML={{ __html: bannerData.Banner_Time.value }}
             ></div>
-            <button
-              className={styles.header__submit_button}
-              url={bannerData.Banner_Call_Button.url}
-              dangerouslySetInnerHTML={{
-                __html: bannerData.Banner_Call_Button.value,
-              }}
-            ></button>
+
+            <a href={bannerData.Banner_Call_Button.url}>
+              <button
+                className={styles.header__submit_button}
+                dangerouslySetInnerHTML={{
+                  __html: bannerData.Banner_Call_Button.value,
+                }}
+              ></button>
+            </a>
           </div>
         </div>
       </div>

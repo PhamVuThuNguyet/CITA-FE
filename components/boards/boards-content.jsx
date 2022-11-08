@@ -18,16 +18,6 @@ export default function BoardsContent({ data }) {
           internationalAdvisors.Boards_InternationalAdvisors_Content.value
         }
       >
-        <Image
-          src={
-            internationalAdvisors.Boards_InternationalAdvisors_Content.image
-              ? internationalAdvisors.Boards_InternationalAdvisors_Content.image
-                  .publicUrl
-              : ''
-          }
-          width={256}
-          height={256}
-        />
       </ItemLayout>
     </div>
   );

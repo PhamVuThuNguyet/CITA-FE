@@ -9,10 +9,15 @@ export default function HomeContent({ data }) {
   const topicLayout = convertArrayToObject(layouts.Home_Topic.elements);
   const instructionLayout = convertArrayToObject(layouts.Home_Instruction.elements);
 
+  const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 100}`
+  }
+
   return (
     <div>
       <Image
-        src={homePoster?.image?.publicUrl}
+        loader={myLoader}
+        src={homePoster.image.publicUrl}
         width={100}
         height={100}
         style={{

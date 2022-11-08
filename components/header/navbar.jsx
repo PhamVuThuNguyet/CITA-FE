@@ -39,12 +39,11 @@ export default function NavBar({ data }) {
           <i className="fa fa-caret-down"></i>
           <div className={styles.navbar_sub_item}>
             {navData.Header_Information.content.map((item) => (
-              <Link href={item.url}>
-                <a
-                  key={item.name}
-                  dangerouslySetInnerHTML={{ __html: item.value }}
-                ></a>
-              </Link>
+              <a
+                href={item.url}
+                key={item.name}
+                dangerouslySetInnerHTML={{ __html: item.value }}
+              ></a>
             ))}
           </div>
         </div>

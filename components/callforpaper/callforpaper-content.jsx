@@ -1,14 +1,14 @@
 import ItemLayout from '../layout/item-layout';
 import styles from '../../styles/Callforpaper.module.scss';
+import { convertArrayToObject } from '../../utils';
 
-const CallforpaperContent = () => {
+
+const CallforpaperContent = ({data}) => {
+    //todo: add data for layouts
+    const layouts = convertArrayToObject(data);
     return (
         <>
-            <ItemLayout section_title={"Thông tin chung"} section_content={
-                `<img class=${styles.fullImg} src="https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=" alt="Italian Trulli"/>
-                heehheehehhe
-                `
-            }/>
+            <ItemLayout section_title={data} section_content={data}/>
         </>
     );
 }

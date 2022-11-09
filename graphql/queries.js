@@ -150,3 +150,16 @@ export const GET_SUBMITED_PAPER = gql`
   }
 `;
 
+export const GET_SUBMITION_TEMPLATES = gql`
+  query getSubmitionTemplates {
+    allPages(where: { name: "Submition_Templates" }) {
+      layouts {
+        name
+        elements {
+          name
+          value
+        }
+      }
+    }
+  }
+`;

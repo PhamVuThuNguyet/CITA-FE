@@ -70,11 +70,11 @@ export default function NavBar({ data }) {
         </a>
         <div className={styles.navbar__item}>
           <div
-            dangerouslySetInnerHTML={{ __html: navData.Header_Submition.value }}
+            dangerouslySetInnerHTML={{ __html: navData.Header_Submission.value }}
           ></div>
           <i className="fa fa-caret-down"></i>
           <div className={styles.navbar_sub_item}>
-            {navData.Header_Submition.content.map((item) => (
+            {navData.Header_Submission.content.map((item) => (
               <a
                 key={item.name}
                 href={item.url}

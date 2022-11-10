@@ -55,7 +55,7 @@ export const GET_SIDEBAR = gql`
 `;
 
 export const GET_ORGANIZER = gql`
-  query getFooter {
+  query getOrg {
     allLayouts(where: { name: "Organizer" }) {
       elements(sortBy: order_ASC) {
         name
@@ -105,7 +105,7 @@ export const GET_RULE = gql`
 export const GET_BOARDS = gql`
   query getBoards {
     allPages(where: { name: "Boards" }) {
-layouts {
+      layouts {
         name
         elements {
           name
@@ -117,7 +117,7 @@ layouts {
       }
     }
   }
-  `;
+`;
 export const GET_CALL_FOR_PAPER = gql`
   query getCallForPaper {
     allPages(where: { name: "Call_For_Paper" }) {
@@ -135,12 +135,12 @@ export const GET_CALL_FOR_PAPER = gql`
   }
 `;
 
-export const GET_SUBMITED_PAPER = gql`
+export const GET_SUBMITTED_PAPER = gql`
   query getPaper {
-    allLayouts(where: { name: "Submited_Paper" }) {
-      elements {
+    allLayouts(where: { name: "Submitted-Paper_All" }) {
+      elements(sortBy: value_ASC) {
         name
-        value        
+        value
         content {
           name
           value
@@ -150,14 +150,35 @@ export const GET_SUBMITED_PAPER = gql`
   }
 `;
 
-export const GET_SUBMITION_TEMPLATES = gql`
-  query getSubmitionTemplates {
-    allPages(where: { name: "Submition_Templates" }) {
+export const GET_SUBMISSiON_TEMPLATES = gql`
+  query getSubmissionTemplates {
+    allPages(where: { name: "Submission-Templates" }) {
       layouts {
         name
         elements {
           name
           value
+        }
+      }
+    }
+  }
+`;
+
+export const GET_KEYNOTE = gql`
+  query getKeynote {
+    allPages(where: { name: "Keynote" }) {
+      layouts {
+        name
+        elements {
+          name
+          value
+          image {
+            publicUrl
+          }
+          content(sortBy: order_ASC) {
+            name
+            value
+          }
         }
       }
     }

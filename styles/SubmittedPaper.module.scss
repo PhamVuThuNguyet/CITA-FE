@@ -1,18 +1,27 @@
 .table {
     width: 100%;
     color: #FFEFD1;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-collapse: separate;
     tr:nth-child(even) {
         background-color: #ffe7bc;
       }
     th, td {
         border: 2px solid #374F8A;
+        padding: 1rem 1rem;
+        text-align: left;
     }
     th {
         background-color: #374F8A;
+        font-size: 1.8rem;
+        text-align: center;
     }
     td {
         color: #374F8A;
+    }
+    tr{
+        > :first-child{
+            text-align: center;
+        }
     }
 }

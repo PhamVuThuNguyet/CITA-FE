@@ -1,7 +1,7 @@
 import { convertArrayToObject } from '../../utils';
 import styles from '../../styles/NavBar.module.scss';
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
+
 export default function NavBar({ data }) {
   const navData = convertArrayToObject(data.elements);
   const [color, setColor] = useState(false);
@@ -70,7 +70,9 @@ export default function NavBar({ data }) {
         </a>
         <div className={styles.navbar__item}>
           <div
-            dangerouslySetInnerHTML={{ __html: navData.Header_Submission.value }}
+            dangerouslySetInnerHTML={{
+              __html: navData.Header_Submission.value,
+            }}
           ></div>
           <i className="fa fa-caret-down"></i>
           <div className={styles.navbar_sub_item}>

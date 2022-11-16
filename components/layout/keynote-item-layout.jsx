@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import styles from '../../styles/KeyNoteItem.module.scss';
+import myLoader from '../../utils/image-loader';
 export default function KeyNoteItem({ data }) {
-  const myLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 100}`;
-  };
   return (
     <div className={styles['keynote-item']}>
       <div className={styles['keynote-item__image']}>

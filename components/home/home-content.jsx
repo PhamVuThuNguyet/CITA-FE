@@ -1,6 +1,7 @@
 import Image from 'next/future/image';
 import { convertArrayToObject } from '../../utils';
 import ItemLayout from "../layout/item-layout";
+import myLoader from '../../utils/image-loader';
 
 export default function HomeContent({ data }) {
   const layouts = convertArrayToObject(data);
@@ -9,9 +10,6 @@ export default function HomeContent({ data }) {
   const topicLayout = convertArrayToObject(layouts.Home_Topic.elements);
   const instructionLayout = convertArrayToObject(layouts.Home_Instruction.elements);
 
-  const myLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 100}`
-  }
 
   return (
     <div>

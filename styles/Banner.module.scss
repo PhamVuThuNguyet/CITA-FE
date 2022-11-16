@@ -1,10 +1,19 @@
-.header {
+.banner {
   position: relative;
   width: 100%;
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-top: 8.5rem;
+  padding-bottom: 7rem;
+  min-height: max-content;
 }
 
-.header__conf-name {
+.banner__conf-name {
   font-family: 'montserrat';
   color: white;
   text-transform: capitalize;
@@ -14,20 +23,29 @@
   animation: fadein-top 1s;
 }
 
-.header__content {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  padding-top: 11.2rem;
+.banner__vku-logo {
+  max-width: 12.5rem;
+  margin-top: 3.4rem;
 }
 
-.header__title {
+.banner__vku-name {
+  color: white;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 2.4rem;
+  margin: 1rem 0;
+}
+
+.banner__sponsors {
+  display: flex;
+  gap: 3.5rem;
+  margin-bottom: 3rem;
+  img {
+    max-width: 9rem;
+  }
+}
+
+.banner__title {
   margin: 0;
   margin-top: 1rem;
   line-height: 2;
@@ -40,7 +58,7 @@
   animation: fadein-top 1s;
 }
 
-.header__sub_title {
+.banner__sub_title {
   font-family: Montserrat;
   line-height: 1;
   color: white;
@@ -53,25 +71,24 @@
   animation: fadein-bot 1s;
 }
 
-.header__time {
+.banner__time {
   font-family: 'EB Garamond';
   color: white;
-  margin-top: 6rem;
-  font-size: 2.4rem;
+  margin-top: 4.9rem;
+  font-size: 2.6rem;
   animation: fadein-left 1s;
 }
 
-.header__submit_button {
+.banner__submit_button {
   position: relative;
   z-index: 1;
   padding: 1.6rem 6rem;
-  background-color: #C92335;
-  color: #FFEFD1;
+  background-color: #c92335;
+  color: #ffefd1;
   font-family: 'EB Garamond';
   border-radius: 1rem;
   font-size: 2rem;
-  margin-top: 3.2rem;
-  margin-bottom: 10rem;
+  margin-top: 3rem;
   transition: scale 0.2s ease-in;
   animation: fadein-right 1s;
   &::before {

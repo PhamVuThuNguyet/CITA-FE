@@ -5,6 +5,7 @@
   right: 0;
   left: 0;
   z-index: 999;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar {
@@ -14,7 +15,7 @@
   justify-content: space-evenly;
   color: white;
   padding: 0.5rem;
-  transition: width 0.3s ease-out;
+  transition: all 0.3s ease-out;
   animation: fadein 0.5s ease-in;
 }
 .navbar__main-logo {

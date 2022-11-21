@@ -1,7 +1,6 @@
 import styles from '../../styles/Banner.module.scss';
-import Image from 'next/future/image';
 import { convertArrayToObject } from '../../utils';
-import myLoader from '../../utils/image-loader';
+
 
 export default function Banner({ data }) {
   const bannerData = convertArrayToObject(data.elements);
@@ -11,7 +10,7 @@ export default function Banner({ data }) {
       style={{
         backgroundImage: `linear-gradient(
           rgba(55, 79, 138, 0.45), 
-          rgba(55, 79, 138, 0.85)
+          rgba(55, 79, 138, 0.95)
         ), url('${bannerData.Banner_Image.image.publicUrl}')`,
       }}
     >

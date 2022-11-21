@@ -1,172 +1,171 @@
 .banner {
-  background-color: #374F8A;
-  background-blend-mode: multiply;
-  position: relative;
-  width: 100%;
-  text-align: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  padding-top: 8.5rem;
-  padding-bottom: 7rem;
-  min-height: max-content;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 8.5rem;
+    padding-bottom: 7rem;
+    min-height: max-content;
 }
 
 .banner__filter_div {
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
 }
 
 .banner__conf-name {
-  font-family: 'montserrat';
-  color: white;
-  text-transform: capitalize;
-  font-weight: bold;
-  max-width: 15%;
-  font-size: 1.5rem;
-  animation: fadein-top 1s;
+    font-family: 'montserrat';
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    max-width: 15%;
+    font-size: 1.5rem;
+    animation: fadein-top 1s;
 }
 
 .banner__vku-logo {
-  max-width: 12.5rem;
-  margin-top: 3.4rem;
+    max-width: 12.5rem;
+    margin-top: 3.4rem;
+    filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.35));
 }
 
 .banner__vku-name {
-  color: white;
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 2.4rem;
-  margin: 1rem 0;
+    color: white;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin: 1rem 0;
 }
 
 .banner__sponsors {
-  display: flex;
-  gap: 3.5rem;
-  margin-bottom: 3rem;
-  img {
-    max-width: 9rem;
-  }
+    display: flex;
+    gap: 3.5rem;
+    margin-top: 3rem;
+    img {
+        max-width: 8rem;
+        filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.5));
+    }
 }
 
 .banner__title {
-  margin: 0;
-  margin-top: 1rem;
-  line-height: 2;
-  font-family: Futura;
-  color: #ffc452;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 3.6rem;
-  line-height: 3.6rem;
-  animation: fadein-top 1s;
+    margin: 0;
+    margin-top: 1rem;
+    line-height: 2;
+    font-family: Futura;
+    color: #ffc452;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    animation: fadein-top 1s;
 }
 
 .banner__sub_title {
-  font-family: Montserrat;
-  line-height: 1;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 0.055rem;
-  text-transform: uppercase;
-  font-size: 2.4rem;
-  line-height: 3rem;
-  margin-top: 1.6rem;
-  animation: fadein-bot 1s;
+    font-family: 'EB Garamond';
+    line-height: 1;
+    color: white;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    margin-top: 1.6rem;
+    animation: fadein-bot 1s;
 }
 
 .banner__time {
-  font-family: 'EB Garamond';
-  color: white;
-  margin-top: 4.9rem;
-  font-size: 2.6rem;
-  animation: fadein-left 1s;
+    font-family: 'EB Garamond';
+    color: white;
+    margin-top: 4rem;
+    font-size: 2.6rem;
+    animation: fadein-left 1s;
 }
 
 .banner__submit_button {
-  position: relative;
-  z-index: 1;
-  padding: 1.6rem 6rem;
-  background-color: #c92335;
-  color: #ffefd1;
-  font-family: 'EB Garamond';
-  border-radius: 1rem;
-  font-size: 2rem;
-  margin-top: 3rem;
-  transition: scale 0.2s ease-in;
-  animation: fadein-right 1s;
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
+    position: relative;
+    z-index: 1;
+    padding: 1.6rem 6rem;
+    background-color: #c92335;
+    color: #ffefd1;
+    font-family: 'EB Garamond';
     border-radius: 1rem;
-    background-color: #ffefd1;
-    transform-origin: center right;
-    transform: scaleX(0);
-    transition: transform 0.25s ease-in-out;
-  }
-  &:hover {
-    cursor: pointer;
-    color: #c92335;
-    scale: 1.2;
-  }
-  &:hover::before {
-    transform-origin: center left;
-    transform: scaleX(1);
-  }
-  &:active {
-    scale: 1;
-  }
+    font-size: 2rem;
+    margin-top: 3rem;
+    transition: scale 0.2s ease-in;
+    animation: fadein-right 1s;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        border-radius: 1rem;
+        background-color: #ffefd1;
+        transform-origin: center right;
+        transform: scaleX(0);
+        transition: transform 0.25s ease-in-out;
+    }
+    &:hover {
+        cursor: pointer;
+        color: #c92335;
+        scale: 1.2;
+    }
+    &:hover::before {
+        transform-origin: center left;
+        transform: scaleX(1);
+    }
+    &:active {
+        scale: 1;
+    }
 }
 
 @keyframes fadein-top {
-  from {
-    opacity: 0;
-    transform: translateY(-20%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadein-bot {
-  from {
-    opacity: 0;
-    transform: translateY(20%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadein-left {
-  from {
-    opacity: 0;
-    transform: translateX(-20%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes fadein-right {
-  from {
-    opacity: 0;
-    transform: translateX(+20%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateX(+20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

@@ -9,7 +9,10 @@ export default function Banner({ data }) {
     <div
       className={styles.banner}
       style={{
-        backgroundImage: `url('${bannerData.Banner_Image.image.publicUrl}')`,
+        backgroundImage: `linear-gradient(
+          rgba(55, 79, 138, 0.45), 
+          rgba(55, 79, 138, 0.85)
+        ), url('${bannerData.Banner_Image.image.publicUrl}')`,
       }}
     >
       <div className={styles['banner__conf-name']}>
@@ -24,11 +27,6 @@ export default function Banner({ data }) {
           __html: bannerData.Banner_VKU_Name.value,
         }}
       ></div>
-      <div className={styles['banner__sponsors']}>
-        {bannerData.Banner_Sponsors.content.map((sponsor) => (
-          <img src={sponsor.image.publicUrl} />
-        ))}
-      </div>
       <div>
         <div
           className={styles.banner__title}
@@ -42,6 +40,11 @@ export default function Banner({ data }) {
             __html: bannerData.Banner_SubTitle.value,
           }}
         ></div>
+      </div>
+      <div className={styles['banner__sponsors']}>
+        {bannerData.Banner_Sponsors.content.map((sponsor) => (
+          <img src={sponsor.image.publicUrl} />
+        ))}
       </div>
       <div>
         <div

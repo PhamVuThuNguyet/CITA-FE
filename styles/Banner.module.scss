@@ -38,8 +38,8 @@
 .banner__vku-name {
     color: white;
     font-family: Montserrat;
-    font-weight: bold;
-    font-size: 2.4rem;
+    // font-weight: bold;
+    font-size: 2rem;
     margin: 1rem 0;
 }
 
@@ -61,18 +61,19 @@
     color: #ffc452;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 3.6rem;
+    font-size: 4.2rem;
     line-height: 3.6rem;
     animation: fadein-top 1s;
 }
 
 .banner__sub_title {
-    font-family: 'EB Garamond';
+    font-family: Montserrat;
+    font-weight: 500;
     line-height: 1;
     color: white;
     letter-spacing: 0.25rem;
     text-transform: uppercase;
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     line-height: 3rem;
     margin-top: 1.6rem;
     animation: fadein-bot 1s;

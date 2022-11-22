@@ -5,7 +5,7 @@ import styles from '../../styles/ItemLayout.module.scss';
 export default function SideBar({data}){
     const sidebar = convertArrayToObject(data.elements);
     return (<div>
-        <ItemLayout section_title={sidebar.Home_Timeline_Title.value} section_content={sidebar.Home_Timeline_Content.value}/>
+        <ItemLayout section_title={sidebar.Sidebar_Timeline_Title.value} section_content={sidebar.Sidebar_Timeline_Content.value}/>
         <ItemLayout section_title={sidebar.Sidebar_Submit_Title.value} section_content={sidebar.Sidebar_Submit_Content.value}> 
             <a 
                 className={styles['sidebar-submit-btn']}

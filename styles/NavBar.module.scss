@@ -125,7 +125,7 @@
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 640px) {
   .icon {
     position: absolute;
     top: 3%;
@@ -140,8 +140,9 @@
     cursor: pointer;
     height: 3rem;
 
-    div {
-      &.open {
+    &-open {
+      position: fixed;
+      div {
         &:first-child {
           transform: rotate(45deg);
         }
@@ -153,6 +154,9 @@
           transform: rotate(-45deg);
         }
       }
+    }
+
+    div {
       width: 3rem;
       height: 0.25rem;
       border-radius: 10px;
@@ -176,13 +180,13 @@
   }
   .navcont {
     height: 100%;
-    max-width: max-content;
+    max-width: 70%;
     padding-top: 10rem;
     background-color: #374f8a !important;
     transition: 0.5s;
     transform: translateX(-100%);
-    &-open{
-        transform: translateX(0);
+    &-open {
+      transform: translateX(0);
     }
   }
   .navbar {

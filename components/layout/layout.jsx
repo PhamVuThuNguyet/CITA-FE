@@ -13,7 +13,7 @@ export default function Layout({
   footerData,
   bannerData,
   sidebarData,
-  organizer
+  organizer,
 }) {
   return (
     <>
@@ -35,9 +35,15 @@ export default function Layout({
 
       <main className={styles.main}>
         <div className="flex w-full min-h-screen bg-[#FFEFD1] py-12 px-32 gap-8">
-          <div className="w-2/3 text-center">{children}</div>
+          <div
+            className={['w-2/3 text-center', styles['main-panel']].join(' ')}
+          >
+            {children}
+          </div>
 
-          <div className="w-1/3 text-center">
+          <div
+            className={['w-1/3 text-center', styles['side-panel']].join(' ')}
+          >
             <SideBar data={sidebarData} />
           </div>
         </div>

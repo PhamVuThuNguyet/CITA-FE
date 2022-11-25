@@ -5,4 +5,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 640px){
+    .side-panel{
+        display: none;
+    }
+    .main-panel{
+        width: 100%!important;
+    }
 }

@@ -28,13 +28,18 @@ export default function NavBar({ data }) {
 
   return (
     <>
-      <div className={styles.icon} onClick={toggleSidePanel}>
-        <div className={show ? styles.open : ''}></div>
-        <div className={show ? styles.open : ''}></div>
-        <div className={show ? styles.open : ''}></div>
+      <div
+        className={[styles.icon, show ? styles['icon-open'] : ''].join(' ')}
+        onClick={toggleSidePanel}
+      >
+        <div />
+        <div />
+        <div />
       </div>
       <nav
-        className={[styles.navcont, show?styles["navcont-open"]:""].join(' ')}
+        className={[styles.navcont, show ? styles['navcont-open'] : ''].join(
+          ' '
+        )}
         style={{
           backgroundColor: color ? '#374F8A' : 'transparent',
         }}

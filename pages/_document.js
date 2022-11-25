@@ -21,6 +21,10 @@ export default function Document() {
           href="https://fonts.googleapis.com/css?family=EB Garamond"
           rel="stylesheet"
         ></link>
+        <script
+          src="https://kit.fontawesome.com/a076d05399.js"
+          crossorigin="anonymous"
+        ></script>
       </Head>
       <body>
         <Main />

@@ -1,4 +1,4 @@
-import styles from '../../styles/Organizers.module.css';
+import styles from '../../styles/Organizers.module.scss';
 export default function Organizer({ organizer }) {
   return (
     <div className={styles.organizers}>

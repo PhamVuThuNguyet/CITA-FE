@@ -14,9 +14,6 @@ export default function Banner({ data }) {
         ), url('${bannerData.Banner_Image.image.publicUrl}')`,
       }}
     >
-      <div className={styles['banner__conf-name']}>
-        The 12th Conference on Information Technology and Its Application
-      </div>
       <div className={styles['banner__vku-logo']}>
         <img src={bannerData.Banner_VKU_Logo.image.publicUrl} />
       </div>

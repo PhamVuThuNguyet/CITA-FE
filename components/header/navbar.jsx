@@ -53,12 +53,12 @@ export default function NavBar({ data }) {
           <div className={styles.navbar__item} id={styles['menu-information']}>
             <div
               dangerouslySetInnerHTML={{
-                __html: navData.Header_Information.value,
+                __html: navData.NavBar_Information.value,
               }}
             ></div>
             <i className="fa fa-caret-down"></i>
             <div className={styles.navbar_sub_item}>
-              {navData.Header_Information.content.map((item) => (
+              {navData.NavBar_Information.content.map((item) => (
                 <a
                   href={item.url}
                   key={item.name}
@@ -69,11 +69,11 @@ export default function NavBar({ data }) {
           </div>
           <div className={styles.navbar__item} id={styles['menu-program']}>
             <div
-              dangerouslySetInnerHTML={{ __html: navData.Header_Program.value }}
+              dangerouslySetInnerHTML={{ __html: navData.NavBar_Program.value }}
             ></div>
             <i className="fa fa-caret-down"></i>
             <div className={styles.navbar_sub_item}>
-              {navData.Header_Program.content.map((item) => (
+              {navData.NavBar_Program.content.map((item) => (
                 <a
                   key={item.name}
                   href={item.url}
@@ -84,19 +84,19 @@ export default function NavBar({ data }) {
           </div>
           <a href="/" id={styles['main-logo']}>
             <div
-              dangerouslySetInnerHTML={{ __html: navData.Header_Logo.value }}
+              dangerouslySetInnerHTML={{ __html: navData.NavBar_Logo.value }}
               className={styles['navbar__main-logo']}
             ></div>
           </a>
           <div className={styles.navbar__item} id={styles['menu-submissions']}>
             <div
               dangerouslySetInnerHTML={{
-                __html: navData.Header_Submission.value,
+                __html: navData.NavBar_Submission.value,
               }}
             ></div>
             <i className="fa fa-caret-down"></i>
             <div className={styles.navbar_sub_item}>
-              {navData.Header_Submission.content.map((item) => (
+              {navData.NavBar_Submission.content.map((item) => (
                 <a
                   key={item.name}
                   href={item.url}
@@ -107,11 +107,11 @@ export default function NavBar({ data }) {
           </div>
           <div className={styles.navbar__item} id={styles['menu-support']}>
             <div
-              dangerouslySetInnerHTML={{ __html: navData.Header_Support.value }}
+              dangerouslySetInnerHTML={{ __html: navData.NavBar_Support.value }}
             ></div>
             <i className="fa fa-caret-down"></i>
             <div className={styles.navbar_sub_item}>
-              {navData.Header_Support.content.map((item) => (
+              {navData.NavBar_Support.content.map((item) => (
                 <a
                   key={item.name}
                   href={item.url}

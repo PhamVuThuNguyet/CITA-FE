@@ -1,10 +1,10 @@
 import { GET_BOARDS } from '../graphql/queries';
 import client from '../apollo-client';
-import BoardsContent from '../components/boards/boards-content';
+import CommitteesContent from '../components/committees/committees-content';
 
 export default function Rule({data}){
     return(
-        <BoardsContent data = {data.layouts}/>
+        <CommitteesContent data = {data.layouts}/>
     )
 }
 

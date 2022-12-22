@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
-export const GET_HEADER = gql `
+export const GET_HEADER = gql`
   query getHeader {
-    allLayouts(where: { name: "Header" }) {
+    allLayouts(where: { name: "NavBar" }) {
       elements {
         name
         value
@@ -16,7 +16,7 @@ export const GET_HEADER = gql `
   }
 `;
 
-export const GET_FOOTER = gql `
+export const GET_FOOTER = gql`
   query getFooter {
     allLayouts(where: { name: "Footer" }) {
       elements {
@@ -27,29 +27,29 @@ export const GET_FOOTER = gql `
   }
 `;
 
-export const GET_BANNER = gql `
-  query getBanner {
-    allLayouts(where: { name: "Banner" }) {
-      elements {
+export const GET_BANNER = gql`
+query getBanner {
+  allLayouts(where: { name: "Banner" }) {
+    elements {
+      name
+      value
+      url
+      image {
+        publicUrl
+      }
+      content(sortBy: order_ASC){
         name
         value
-        url
         image {
           publicUrl
-        }
-        content {
-          name
-          value
-          image {
-            publicUrl
-          }
         }
       }
     }
   }
+}
 `;
 
-export const GET_SIDEBAR = gql `
+export const GET_SIDEBAR = gql`
   query getSidebar {
     allLayouts(where: { name: "Sidebar" }) {
       elements {
@@ -61,7 +61,7 @@ export const GET_SIDEBAR = gql `
   }
 `;
 
-export const GET_ORGANIZER = gql `
+export const GET_ORGANIZER = gql`
   query getOrg {
     allLayouts(where: { name: "Organizer" }) {
       elements(sortBy: order_ASC) {
@@ -75,7 +75,7 @@ export const GET_ORGANIZER = gql `
   }
 `;
 
-export const GET_HOME = gql `
+export const GET_HOME = gql`
   query getHome {
     allPages(where: { name: "Home" }) {
       layouts {
@@ -92,7 +92,7 @@ export const GET_HOME = gql `
   }
 `;
 
-export const GET_RULE = gql `
+export const GET_RULE = gql`
   query getRule {
     allPages(where: { name: "Rule" }) {
       layouts {
@@ -109,12 +109,12 @@ export const GET_RULE = gql `
   }
 `;
 
-export const GET_BOARDS = gql `
+export const GET_BOARDS = gql`
   query getBoards {
-    allPages(where: { name: "Boards" }) {
+    allPages(where: { name: "Committees" }) {
       layouts {
         name
-        elements {
+        elements(sortBy: order_ASC) {
           name
           value
           image {
@@ -125,7 +125,7 @@ export const GET_BOARDS = gql `
     }
   }
 `;
-export const GET_CALL_FOR_PAPER = gql `
+export const GET_CALL_FOR_PAPER = gql`
   query getCallForPaper {
     allPages(where: { name: "Call_For_Paper" }) {
       layouts {
@@ -142,7 +142,7 @@ export const GET_CALL_FOR_PAPER = gql `
   }
 `;
 
-export const GET_SUBMITTED_PAPER = gql `
+export const GET_SUBMITTED_PAPER = gql`
   query getPaper {
     allLayouts(where: { name: "Submitted-Paper_All" }) {
       elements(sortBy: value_ASC) {
@@ -157,7 +157,7 @@ export const GET_SUBMITTED_PAPER = gql `
   }
 `;
 
-export const GET_SUBMISSiON_TEMPLATES = gql `
+export const GET_SUBMISSiON_TEMPLATES = gql`
   query getSubmissionTemplates {
     allPages(where: { name: "Submission-Templates" }) {
       layouts {
@@ -171,7 +171,7 @@ export const GET_SUBMISSiON_TEMPLATES = gql `
   }
 `;
 
-export const GET_KEYNOTE = gql `
+export const GET_KEYNOTE = gql`
   query getKeynote {
     allPages(where: { name: "Keynote" }) {
       layouts {

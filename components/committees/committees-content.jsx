@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { convertArrayToObject } from '../../utils';
 import ItemLayout from '../layout/item-layout';
 
-export default function BoardsContent({ data }) {
+export default function CommitteesContent({ data }) {
   return (
     <>
       {data.map((layout) => (

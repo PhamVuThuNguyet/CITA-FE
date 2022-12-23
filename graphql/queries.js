@@ -143,18 +143,21 @@ export const GET_CALL_FOR_PAPER = gql`
 `;
 
 export const GET_SUBMITTED_PAPER = gql`
-  query getPaper {
-    allLayouts(where: { name: "Submitted-Paper_All" }) {
+query getPaper {
+  allPages(where: { name: "Submitted-Paper" }) {
+    layouts{
+      name
       elements(sortBy: value_ASC) {
+      name
+      value
+      content {
         name
         value
-        content {
-          name
-          value
-        }
       }
     }
+    }
   }
+}
 `;
 
 export const GET_SUBMISSiON_TEMPLATES = gql`

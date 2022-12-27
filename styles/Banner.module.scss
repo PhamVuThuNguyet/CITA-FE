@@ -35,6 +35,9 @@
 
 .banner__sponsors {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 6rem;
     margin-top: 5rem;
     img {
@@ -51,6 +54,12 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding: 2rem;
     justify-content: center;
+}
+
+@media only screen and (max-width: 640px) {
+    .banner__sponsors {
+        display: none;
+    }
 }
 
 .banner__title {

@@ -10,19 +10,14 @@ export default function Banner({ data }) {
       style={{
         backgroundImage: `linear-gradient(
           rgba(55, 79, 138, 0), 
-          rgba(248, 248, 255, 0.9)
+          rgba(255, 255, 255, 0.9)
         ), url('${bannerData.Banner_Image.image.publicUrl}')`,
       }}
     >
-      <div className={styles['banner__vku-logo']}>
+      <div className={styles['banner__logo']}>
         <img src={bannerData.Banner_VKU_Logo.image.publicUrl} />
+        <img src={bannerData.Banner_FISU_Logo.image.publicUrl} />
       </div>
-      <div
-        className={styles['banner__vku-name']}
-        dangerouslySetInnerHTML={{
-          __html: bannerData.Banner_VKU_Name.value,
-        }}
-      ></div>
       <div>
         <div
           className={styles.banner__title}
@@ -30,12 +25,12 @@ export default function Banner({ data }) {
             __html: bannerData.Banner_Title.value,
           }}
         ></div>
-        <div
+        {/* <div
           className={styles.banner__sub_title}
           dangerouslySetInnerHTML={{
             __html: bannerData.Banner_SubTitle.value,
           }}
-        ></div>
+        ></div> */}
       </div>
       <div className={styles['banner__sponsors']}>
         {bannerData.Banner_Sponsors.content.map((sponsor) => (

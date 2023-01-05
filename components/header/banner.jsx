@@ -9,8 +9,8 @@ export default function Banner({ data }) {
       className={styles.banner}
       style={{
         backgroundImage: `linear-gradient(
-          rgba(55, 79, 138, 0.45), 
-          rgba(55, 79, 138, 0.95)
+          rgba(55, 79, 138, 0), 
+          rgba(248, 248, 255, 0.9)
         ), url('${bannerData.Banner_Image.image.publicUrl}')`,
       }}
     >

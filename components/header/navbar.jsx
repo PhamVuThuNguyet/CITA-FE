@@ -45,7 +45,7 @@ export default function NavBar({ data }) {
         }}
       >
         <div
-          className={styles.navbar}
+          className={[styles.navbar, color ? styles['navbar-text-color'] : ''].join(' ')}
           style={{
             width: color ? '100%' : '70%',
           }}
@@ -85,7 +85,7 @@ export default function NavBar({ data }) {
           <a href="/" id={styles['main-logo']}>
             <div
               dangerouslySetInnerHTML={{ __html: navData.NavBar_Logo.value }}
-              className={styles['navbar__main-logo']}
+              className={[styles['navbar__main-logo'], color ? styles['navbar__main-logo-color'] : ''].join(' ')}
             ></div>
           </a>
           <div className={styles.navbar__item} id={styles['menu-submissions']}>

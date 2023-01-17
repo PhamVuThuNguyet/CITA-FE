@@ -19,8 +19,7 @@ export default function Layout({
     <>
       <Head>
         <title>
-          Hội thảo khoa học quốc gia Công nghệ thông tin và ứng dụng trong các
-          lĩnh vực
+          International Scientific Conference CITA
         </title>
         <meta
           name="description"

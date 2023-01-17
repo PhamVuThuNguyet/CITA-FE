@@ -1,7 +1,7 @@
 import { convertArrayToObject } from '../../utils';
 import ItemLayout from '../layout/item-layout';
 
-export default function RuleContent({ data }) {
+export default function GuidelinesContent({ data }) {
   const layouts = convertArrayToObject(data);
   const generalInformation = convertArrayToObject(
     layouts.Rule_GeneralInformation.elements

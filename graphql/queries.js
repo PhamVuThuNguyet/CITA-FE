@@ -92,21 +92,21 @@ export const GET_HOME = gql`
   }
 `;
 
-export const GET_RULE = gql`
-  query getRule {
-    allPages(where: { name: "Rule" }) {
-      layouts {
+export const GET_GUIDELINES = gql`
+query getGuidelines {
+  allPages(where: { name: "Submission-Guidelines" }) {
+    layouts {
+      name
+      elements {
         name
-        elements {
-          name
-          value
-          image {
-            publicUrl
-          }
+        value
+        image {
+          publicUrl
         }
       }
     }
   }
+}
 `;
 
 export const GET_BOARDS = gql`

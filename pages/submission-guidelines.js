@@ -1,5 +1,5 @@
 import GuidelinesContent from "../components/guidelines/guidelines-content";
-import { GET_RULE } from '../graphql/queries';
+import { GET_GUIDELINES } from '../graphql/queries';
 import client from '../apollo-client';
 
 export default function SubmissionGuidelines({data}){

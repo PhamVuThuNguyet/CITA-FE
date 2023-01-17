@@ -25,12 +25,6 @@ export default function Banner({ data }) {
             __html: bannerData.Banner_Title.value,
           }}
         ></div>
-        {/* <div
-          className={styles.banner__sub_title}
-          dangerouslySetInnerHTML={{
-            __html: bannerData.Banner_SubTitle.value,
-          }}
-        ></div> */}
       </div>
       <div className={styles['banner__sponsors']}>
         {bannerData.Banner_Sponsors.content.map((sponsor) => (

@@ -6,7 +6,7 @@ export default function ScheduleContent({ data }) {
   const file = convertArrayToObject(data).Schedule_Timeline.elements[0].file;
 
   if (file) {
-    const fileURL = `https://www.google.com/search?q=%${API_URL}${file.publicUrl}`;
+    const fileURL = file.publicUrl;
     return (
       <iframe
         className={styles.schedule__pdf}

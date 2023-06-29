@@ -194,3 +194,28 @@ export const GET_KEYNOTE = gql`
     }
   }
 `;
+
+export const GET_SCHEDULE = gql`
+  query getKeynote {
+    allPages(where: { name: "Schedule" }) {
+      layouts {
+        name
+        elements {
+          name
+          value
+          image {
+            publicUrl
+          }
+          file {
+            publicUrl
+            
+          }
+          content(sortBy: order_ASC) {
+            name
+            value
+          }
+        }
+      }
+    }
+  }
+`;

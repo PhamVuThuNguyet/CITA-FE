@@ -4,7 +4,7 @@ import styles from '../../styles/schedule.module.scss';
 
 export default function ScheduleContent({ data }) {
   const file = convertArrayToObject(data).Schedule_Timeline.elements[0].file;
-  const fileURL = `${API_URL}${file.publicUrl}`;
+  const fileURL = `https://www.google.com/search?q=%${API_URL}${file.publicUrl}`;
   
 
   if (file) {

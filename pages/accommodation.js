@@ -9,10 +9,10 @@ const Accommodation = ({ data }) => {
 export default Accommodation;
 
 export async function getStaticProps(context) {
-  const callForPaperData = await client.query({ query: GET_CALL_FOR_PAPER });
+  const accommodationData = await client.query({ query: GET_CALL_FOR_PAPER });
   return {
     props: {
-      data: callForPaperData.data.allPages[0],
+      data: accommodationData.data.allPages[0],
     }, 
   };
 }

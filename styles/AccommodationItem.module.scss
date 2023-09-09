@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 640px){
+    .container {
+        flex-direction: column;
+    }
+}
+.mapouter {
+    position: relative;
+    width: 100%;
+}
+.gmap_canvas {
+    overflow: hidden;
+    width: 100%;
+}
+.gmap_canvas iframe {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+.gmap_canvas a {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}

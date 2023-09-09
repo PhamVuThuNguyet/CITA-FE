@@ -82,7 +82,7 @@ export default function NavBar({ data }) {
               ))}
             </div>
           </div>
-          <a href="/" id={styles['main-logo']}>
+          <a href={navData.NavBar_Logo.url} id={styles['main-logo']}>
             <div
               dangerouslySetInnerHTML={{ __html: navData.NavBar_Logo.value }}
               className={[styles['navbar__main-logo'], color ? styles['navbar__main-logo-color'] : ''].join(' ')}

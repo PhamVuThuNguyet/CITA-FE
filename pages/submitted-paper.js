@@ -1,5 +1,5 @@
 import client from '../apollo-client';
-import { GET_SUBMITTED_PAPER } from '../graphql/queries';
+import { getQuery } from '../graphql/queries';
 import SubmittedPaperContent from '../components/submitedpaper/submitted-paper-content';
 
 const SubmitedPaper = ({ data }) => {
@@ -9,6 +9,7 @@ const SubmitedPaper = ({ data }) => {
 export default SubmitedPaper;
 
 export async function getStaticProps(context) {
+  const { GET_SUBMITTED_PAPER } = getQuery();
   const Data = await client.query({ query: GET_SUBMITTED_PAPER });
   return {
     props: {

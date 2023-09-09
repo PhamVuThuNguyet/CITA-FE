@@ -1,6 +1,7 @@
 import client from '../apollo-client';
 import SubmissionTemplatesContent from '../components/submitiontemplates/submission-templates-content';
-import { GET_SUBMISSiON_TEMPLATES } from '../graphql/queries';
+import { getQuery } from '../graphql/queries';
+
 
 const SubmitionTemplates = ({ data }) => {
   return <SubmissionTemplatesContent data={data.layouts} />;
@@ -9,7 +10,8 @@ const SubmitionTemplates = ({ data }) => {
 export default SubmitionTemplates;
 
 export async function getStaticProps(context) {
-  const Data = await client.query({ query: GET_SUBMISSiON_TEMPLATES });
+  const { GET_SUBMISSION_TEMPLATES } = getQuery();
+  const Data = await client.query({ query: GET_SUBMISSION_TEMPLATES });
   return {
     props: {
       data: Data.data.allPages[0],

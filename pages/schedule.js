@@ -1,6 +1,6 @@
 import client from '../apollo-client';
 import ScheduleContent from '../components/schedule/schedule-content';
-import { GET_SCHEDULE } from '../graphql/queries';
+import { getQuery } from '../graphql/queries';
 
 const Schedule = ({ data }) => {
   return <ScheduleContent data={data.layouts}/>;
@@ -9,6 +9,7 @@ const Schedule = ({ data }) => {
 export default Schedule;
 
 export async function getStaticProps(context) {
+  const { GET_SCHEDULE } = getQuery();
   const keynoteData = await client.query({ query: GET_SCHEDULE });
   return {
     props: {

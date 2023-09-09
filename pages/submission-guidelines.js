@@ -1,5 +1,5 @@
 import GuidelinesContent from "../components/guidelines/guidelines-content";
-import { GET_GUIDELINES } from '../graphql/queries';
+import { getQuery } from '../graphql/queries';
 import client from '../apollo-client';
 
 export default function SubmissionGuidelines({data}){
@@ -9,6 +9,7 @@ export default function SubmissionGuidelines({data}){
 }
 
 export async function getStaticProps(context) {
+    const { GET_GUIDELINES } = getQuery();
     const guidelinesData = await client.query({ query: GET_GUIDELINES })
     return {
       props: {

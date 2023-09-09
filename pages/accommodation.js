@@ -1,6 +1,6 @@
 import AccommodationContent from '../components/accommodation/accommondation-content';
 import client from '../apollo-client';
-import { GET_CALL_FOR_PAPER } from '../graphql/queries';
+import { getQuery } from '../graphql/queries';
 
 const Accommodation = ({ data }) => {
   return <AccommodationContent data={data.layouts} />;
@@ -9,6 +9,7 @@ const Accommodation = ({ data }) => {
 export default Accommodation;
 
 export async function getStaticProps(context) {
+  const { GET_CALL_FOR_PAPER } = getQuery();
   const accommodationData = await client.query({ query: GET_CALL_FOR_PAPER });
   return {
     props: {

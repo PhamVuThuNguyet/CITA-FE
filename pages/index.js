@@ -1,6 +1,6 @@
 import HomeContent from "../components/home/home-content";
 import client from '../apollo-client';
-import { GET_HOME } from '../graphql/queries';
+import { getQuery } from '../graphql/queries';
 
 export default function Home({ data }) {
   return (
@@ -9,6 +9,7 @@ export default function Home({ data }) {
 }
 
 export async function getStaticProps(context) {
+  const { GET_HOME } = getQuery();
   const homeData = await client.query({ query: GET_HOME })
   return {
     props: {

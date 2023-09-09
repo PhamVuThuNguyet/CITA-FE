@@ -31,10 +31,12 @@ export default function Banner({ data }) {
           <img src={sponsor.image.publicUrl} />
         ))}
       </div>
-      <div>
+
+      <div className={styles['banner_bottom']}>
         <div
           className={styles.banner__time}
           dangerouslySetInnerHTML={{ __html: bannerData.Banner_Time.value }}
+          
         ></div>
 
         <a href={bannerData.Banner_Call_Button.url}>

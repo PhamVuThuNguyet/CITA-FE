@@ -21,7 +21,7 @@ export async function getStaticProps({ params }) {
 
 export const getStaticPaths = async () => {
   return {
-    paths: ['/2024'],
+    paths: [],
     fallback: true, // false or "blocking"
   };
 };

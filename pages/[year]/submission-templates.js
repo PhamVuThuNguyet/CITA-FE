@@ -24,7 +24,7 @@ export async function getStaticProps({ params }) {
 
 export const getStaticPaths = async () => {
   return {
-    paths: ['/2024/submission-templates'],
+    paths: [],
     fallback: true, // false or "blocking"
   }
 }

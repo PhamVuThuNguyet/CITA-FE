@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 
 export default function NavBar({ data }) {
   const navData = convertArrayToObject(data.elements);
+  console.log(navData);
   const [color, setColor] = useState(false);
   const [show, setShow] = useState(false);
 
@@ -45,28 +46,23 @@ export default function NavBar({ data }) {
         }}
       >
         <div
-          className={[styles.navbar, color ? styles['navbar-text-color'] : ''].join(' ')}
-          style={{
-            width: color ? '100%' : '70%',
-          }}
+          className={[
+            styles.navbar,
+            color ? styles['navbar-text-color'] : '',
+          ].join(' ')}
         >
-          <div className={styles.navbar__item} id={styles['menu-information']}>
+          <a href={navData.NavBar_Information.url}>
             <div
-              dangerouslySetInnerHTML={{
-                __html: navData.NavBar_Information.value,
-              }}
-            ></div>
-            <i className="fa fa-caret-down"></i>
-            <div className={styles.navbar_sub_item}>
-              {navData.NavBar_Information.content.map((item) => (
-                <a
-                  href={item.url}
-                  key={item.name}
-                  dangerouslySetInnerHTML={{ __html: item.value }}
-                ></a>
-              ))}
+              className={styles.navbar__item}
+              id={styles['menu-information']}
+            >
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: navData.NavBar_Information.value,
+                }}
+              ></div>
             </div>
-          </div>
+          </a>
           <div className={styles.navbar__item} id={styles['menu-program']}>
             <div
               dangerouslySetInnerHTML={{ __html: navData.NavBar_Program.value }}
@@ -82,12 +78,41 @@ export default function NavBar({ data }) {
               ))}
             </div>
           </div>
+          <a href={navData.NavBar_Committees.url}>
+            <div
+              className={styles.navbar__item}
+              id={styles['menu-information']}
+            >
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: navData.NavBar_Committees.value,
+                }}
+              ></div>
+            </div>
+          </a>
+
           <a href={navData.NavBar_Logo.url} id={styles['main-logo']}>
             <div
               dangerouslySetInnerHTML={{ __html: navData.NavBar_Logo.value }}
-              className={[styles['navbar__main-logo'], color ? styles['navbar__main-logo-color'] : ''].join(' ')}
+              className={[
+                styles['navbar__main-logo'],
+                color ? styles['navbar__main-logo-color'] : '',
+              ].join(' ')}
             ></div>
           </a>
+          <a href={navData.NavBar_SpecialSession.url}>
+            <div
+              className={styles.navbar__item}
+              id={styles['menu-information']}
+            >
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: navData.NavBar_SpecialSession.value,
+                }}
+              ></div>
+            </div>
+          </a>
+
           <div className={styles.navbar__item} id={styles['menu-submissions']}>
             <div
               dangerouslySetInnerHTML={{

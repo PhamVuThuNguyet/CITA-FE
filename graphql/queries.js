@@ -68,7 +68,7 @@ export const getQuery = (year = 2023) => {
   const GET_ORGANIZER = gql`
     query getOrg {
       allLayouts(where: { name: "Organizer" }) {
-        elements(sortBy: order_ASC) {
+        elements(sortBy: order_ASC, where: { name_contains: "${queryCondition}" }) {
           name
           value
           image {
@@ -118,7 +118,7 @@ export const getQuery = (year = 2023) => {
       allPages(where: { name: "Committees" }) {
         layouts {
           name
-          elements(sortBy: order_ASC) {
+          elements(sortBy: order_ASC, where: { name_contains: "${queryCondition}" }) {
             name
             value
             image {
@@ -151,7 +151,7 @@ export const getQuery = (year = 2023) => {
       allPages(where: { name: "Submitted-Paper" }) {
         layouts {
           name
-          elements(sortBy: value_ASC) {
+          elements(sortBy: value_ASC, where: { name_contains: "${queryCondition}" }) {
             name
             value
             content {

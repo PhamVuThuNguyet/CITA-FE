@@ -23,7 +23,7 @@ export async function getStaticProps({ params }) {
 
 export const getStaticPaths = async () => {
   return {
-    paths: ['/2024/submitted-paper'],
+    paths: [],
     fallback: true, // false or "blocking"
   }
 }

@@ -10,7 +10,6 @@ export default function TravelItemLayout({ section_title = '', section_content='
       <div className={exclusive_styles.grid_wrapper}>
         {
           images_list.map((src, i) => {
-            console.log(src);
             return (
               <div>
                 <img src={src} key={i} alt="" />

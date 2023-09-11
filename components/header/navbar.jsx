@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 
 export default function NavBar({ data }) {
   const navData = convertArrayToObject(data.elements);
-  console.log(navData);
   const [color, setColor] = useState(false);
   const [show, setShow] = useState(false);
 

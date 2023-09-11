@@ -1,7 +1,6 @@
 import styles from '../../styles/Banner.module.scss';
 import { convertArrayToObject } from '../../utils';
 
-
 export default function Banner({ data }) {
   const bannerData = convertArrayToObject(data.elements);
   return (
@@ -32,16 +31,18 @@ export default function Banner({ data }) {
         ))}
       </div>
       <div
-          className={styles.banner__time}
-          dangerouslySetInnerHTML={{ __html: bannerData.Banner_Time.value }}
-          
-        ></div>
+        className={styles.banner__time}
+        dangerouslySetInnerHTML={{ __html: bannerData.Banner_Time.value }}
+      ></div>
       <div className={styles['banner_bottom']}>
-      <div
-          className={styles.banner__timeline}
-          dangerouslySetInnerHTML={{ __html: bannerData.Banner_Timeline.value }}
-          
-        ></div>
+        {bannerData.Banner_Timeline && (
+          <div
+            className={styles.banner__timeline}
+            dangerouslySetInnerHTML={{
+              __html: bannerData.Banner_Timeline.value,
+            }}
+          ></div>
+        )}
 
         <a href={bannerData.Banner_Call_Button.url}>
           <button

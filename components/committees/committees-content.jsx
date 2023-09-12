@@ -3,14 +3,19 @@ import { convertArrayToObject } from '../../utils';
 import ItemLayout from '../layout/item-layout';
 
 export default function CommitteesContent({ data }) {
+  console.log(data);
   return (
     <>
-      {data.map((layout) => (
-        <ItemLayout
-          section_title={layout.elements[0].value}
-          section_content={layout.elements[1].value}
-        ></ItemLayout>
-      ))}
+      {data.map((layout) =>
+        layout.elements.length > 0 ? (
+          <ItemLayout
+            section_title={layout.elements[0].value}
+            section_content={layout.elements[1].value}
+          ></ItemLayout>
+        ) : (
+          <></>
+        )
+      )}
     </>
   );
 }

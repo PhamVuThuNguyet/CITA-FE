@@ -116,7 +116,7 @@ export const getQuery = (year = 2023) => {
   const GET_BOARDS = gql`
     query getBoards {
       allPages(where: { name: "Committees" }) {
-        layouts {
+        layouts(sortBy: order_ASC){
           name
           elements(sortBy: order_ASC, where: { name_contains: "${queryCondition}" }) {
             name

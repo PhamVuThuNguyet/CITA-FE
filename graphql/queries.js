@@ -223,6 +223,23 @@ export const getQuery = (year = 2023) => {
     }
   `;
 
+  const GET_SPECIAL_SESSION = gql`
+    query getSecialSession {
+      allPages(where: { name: "Special-Session" }) {
+        layouts {
+          name
+          elements(sortBy: order_ASC, where: { name_contains: "${queryCondition}" }) {
+            name
+            value
+            image {
+              publicUrl
+            }
+          }
+        }
+      }
+    }
+  `;
+
   return {
     GET_HEADER,
     GET_FOOTER,
@@ -237,5 +254,6 @@ export const getQuery = (year = 2023) => {
     GET_SUBMISSION_TEMPLATES,
     GET_KEYNOTE,
     GET_SCHEDULE,
-  }
+    GET_SPECIAL_SESSION
+  };
 };

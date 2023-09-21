@@ -33,3 +33,13 @@ a {
   font-family: Futura;
   src: url('../public/unicode.futurab.ttf');
 }
+
+h1 {
+  @apply text-2xl;
+}
+h2 {
+  @apply text-xl;
+}
+h3 {
+  @apply text-lg;
+}

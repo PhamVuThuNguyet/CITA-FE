@@ -4,14 +4,16 @@ import myLoader from '../../utils/image-loader';
 export default function KeyNoteItem({ data }) {
   return (
     <div className={styles['keynote-item']}>
-      <div className={styles['keynote-item__image']}>
-        <Image
-          loader={myLoader}
-          src={data.image.publicUrl}
-          width={300}
-          height={300}
-        />
-      </div>
+      {data.image && (
+        <div className={styles['keynote-item__image']}>
+          <Image
+            loader={myLoader}
+            src={data.image.publicUrl}
+            width={300}
+            height={300}
+          />
+        </div>
+      )}
       <div className={styles['keynote-item__info']}>
         <div
           className={styles['keynote-item__info__title']}

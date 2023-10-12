@@ -31,7 +31,7 @@ export default function MyApp({
 
 MyApp.getInitialProps = async (context) => {
   if (context) {
-    let year = 2023;
+    let year = 2024;
     if (context.ctx.query.year) {
       year = context.ctx.query.year
     }

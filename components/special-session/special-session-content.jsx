@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { convertArrayToObject } from '../../utils';
 import ItemLayout from '../layout/item-layout';
 
-export default function SpecialSEssionContent({ data }) {
+export default function SpecialSessionContent({ data }) {
   return (
     <>
       {data.map((layout) =>

@@ -8,8 +8,8 @@
   transition: all 0.3s ease-in-out;
 }
 
-.navbar-text-color{
-  color: white!important;
+.navbar-text-color {
+  color: white !important;
 }
 
 .navbar {
@@ -23,8 +23,8 @@
   animation: fadein 0.5s ease-in;
 }
 
-.navbar__main-logo-color{
-  color: #ffefd1!important;
+.navbar__main-logo-color {
+  color: #ffefd1 !important;
 }
 
 .navbar__main-logo {
@@ -211,11 +211,14 @@
     #menu-program {
       order: 3;
     }
-    #menu-submissions {
+    #menu-specialsession {
       order: 4;
     }
-    #menu-support {
+    #menu-submissions {
       order: 5;
+    }
+    #menu-support {
+      order: 6;
     }
     .navbar_sub_item {
       left: 100%;

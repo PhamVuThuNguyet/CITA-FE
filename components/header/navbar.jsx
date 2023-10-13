@@ -99,18 +99,27 @@ export default function NavBar({ data }) {
               ].join(' ')}
             ></div>
           </a>
-          <a href={navData.NavBar_SpecialSession.url}>
+
+          <div
+            className={styles.navbar__item}
+            id={styles['menu-specialsession']}
+          >
             <div
-              className={styles.navbar__item}
-              id={styles['menu-information']}
-            >
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: navData.NavBar_SpecialSession.value,
-                }}
-              ></div>
+              dangerouslySetInnerHTML={{
+                __html: navData.NavBar_SpecialSession.value,
+              }}
+            ></div>
+            <i className="fa fa-caret-down"></i>
+            <div className={styles.navbar_sub_item}>
+              {navData.NavBar_SpecialSession.content.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.url}
+                  dangerouslySetInnerHTML={{ __html: item.value }}
+                ></a>
+              ))}
             </div>
-          </a>
+          </div>
 
           <div className={styles.navbar__item} id={styles['menu-submissions']}>
             <div

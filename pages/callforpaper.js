@@ -15,5 +15,6 @@ export async function getStaticProps(context) {
     props: {
       data: callForPaperData.data.allPages[0],
     }, 
+    revalidate: 5
   };
 }

@@ -15,7 +15,8 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       data: boardsData.data.allPages[0],
-    },
+    }, 
+    revalidate: 5
   };
 }
 

@@ -16,6 +16,7 @@ export async function getStaticProps({ params }) {
     props: {
       data: homeData.data.allPages[0],
     }, // will be passed to the page component as props
+    revalidate: 5
   };
 }
 

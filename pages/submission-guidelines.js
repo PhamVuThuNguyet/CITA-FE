@@ -14,6 +14,7 @@ export async function getStaticProps(context) {
     return {
       props: {
         data: guidelinesData.data.allPages[0]
-      },
+      }, 
+      revalidate: 5
     }
   }

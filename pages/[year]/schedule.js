@@ -18,6 +18,7 @@ export async function getStaticProps({ params }) {
     props: {
       data: keynoteData.data.allPages[0],
     }, 
+    revalidate: 5 
   };
 }
 

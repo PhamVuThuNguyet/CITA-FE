@@ -274,7 +274,7 @@ export const getQuery = (year = 2024) => {
   }
 `;
 
-const GET_SPECIAL_SESSION_CV = gql`
+  const GET_SPECIAL_SESSION_CV = gql`
   query getSecialSession {
     allPages(where: { name: "Special-Session-CV" }) {
       layouts {
@@ -291,9 +291,9 @@ const GET_SPECIAL_SESSION_CV = gql`
   }
 `;
 
-const GET_SPECIAL_SESSION_CIDMM = gql`
+  const GET_SPECIAL_SESSION_BIIDE = gql`
   query getSecialSession {
-    allPages(where: { name: "Special-Session-CIDMM" }) {
+    allPages(where: { name: "Special-Session-BIIDE" }) {
       layouts {
         name
         elements(sortBy: order_ASC, where: { name_contains: "${queryCondition}" }) {
@@ -326,6 +326,6 @@ const GET_SPECIAL_SESSION_CIDMM = gql`
     GET_SPECIAL_SESSION_AICISM,
     GET_SPECIAL_SESSION_CYBER,
     GET_SPECIAL_SESSION_CV,
-    GET_SPECIAL_SESSION_CIDMM
+    GET_SPECIAL_SESSION_BIIDE
   };
 };

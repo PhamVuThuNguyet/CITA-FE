@@ -3,15 +3,15 @@ import client from '../../apollo-client';
 import SpecialSessionContent from '../../components/special-session/special-session-content';
 
 export default function Rule({ data }) {
-  if(!data || !data.layouts) return <></>;
+  if (!data || !data.layouts) return <></>;
   return <SpecialSessionContent data={data.layouts} />;
 }
 
 export async function getStaticProps({ params }) {
   const { year } = params;
 
-  const { GET_SPECIAL_SESSION_CIDMM } = getQuery(year);
-  const boardsData = await client.query({ query: GET_SPECIAL_SESSION_CIDMM });
+  const { GET_SPECIAL_SESSION_BIIDE } = getQuery(year);
+  const boardsData = await client.query({ query: GET_SPECIAL_SESSION_BIIDE });
   return {
     props: {
       data: boardsData.data.allPages[0],

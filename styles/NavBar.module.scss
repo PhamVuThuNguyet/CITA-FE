@@ -203,22 +203,22 @@
     width: 100% !important;
     row-gap: 3rem;
     #main-logo {
-      order: 1;
+      display: none;
     }
     #menu-information {
-      order: 2;
+      order: 1;
     }
     #menu-program {
-      order: 3;
+      order: 2;
     }
     #menu-specialsession {
-      order: 4;
+      order: 3;
     }
     #menu-submissions {
-      order: 5;
+      order: 4;
     }
     #menu-support {
-      order: 6;
+      order: 5;
     }
     .navbar_sub_item {
       left: 100%;

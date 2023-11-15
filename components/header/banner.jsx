@@ -13,6 +13,19 @@ export default function Banner({ data }) {
         ), url('${bannerData.Banner_Image.image.publicUrl}')`,
       }}
     >
+      <div>
+        <a
+          href={bannerData.Banner_Main_Logo.url}
+          id={styles['main-logo-mobile']}
+        >
+          <div
+            dangerouslySetInnerHTML={{
+              __html: bannerData.Banner_Main_Logo.value,
+            }}
+            className={[styles['main-logo-mobile']].join(' ')}
+          ></div>
+        </a>
+      </div>
       <div className={styles['banner__logo']}>
         <img src={bannerData.Banner_VKU_Logo.image.publicUrl} />
         <img src={bannerData.Banner_FISU_Logo.image.publicUrl} />

@@ -3,8 +3,8 @@ import ScheduleContent from '../../components/schedule/schedule-content';
 import { getQuery } from '../../graphql/queries';
 
 const Schedule = ({ data }) => {
-  if(!data || !data.layouts) return <></>;
-  return <ScheduleContent data={data.layouts}/>;
+  if (!data || !data.layouts) return <></>;
+  return <ScheduleContent data={data.layouts} />;
 };
 
 export default Schedule;
@@ -17,8 +17,8 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       data: keynoteData.data.allPages[0],
-    }, 
-    revalidate: 5 
+    },
+    revalidate: 5
   };
 }
 

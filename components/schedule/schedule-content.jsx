@@ -1,18 +1,22 @@
 import { convertArrayToObject } from '../../utils';
-import { API_URL } from '../../config';
-import styles from '../../styles/schedule.module.scss';
-
+import styles from '../../styles/Schedule.module.scss';
+import myLoader from '../../utils/image-loader';
 export default function ScheduleContent({ data }) {
   const file = convertArrayToObject(data).Schedule_Timeline.elements[0].file;
 
   if (file) {
     const fileURL = file.publicUrl;
     return (
-      <iframe
-        className={styles.schedule__pdf}
-        src={fileURL}
-        title="Schedule CITA"
-      ></iframe>
+      <>
+        <Image
+          loader={myLoader}
+          src={fileURL}
+          width={100}
+          height={100}
+          className={styles.schedule__pdf}
+          alt="Schedule"
+        />
+      </>
     );
   }
 

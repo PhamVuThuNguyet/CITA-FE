@@ -7,9 +7,7 @@ export default function ScheduleContent({ data }) {
     const fileURL = file.publicUrl;
     return (
       <>
-
-        <iframe src={fileURL} width={100} height={100}></iframe>
-
+      <iframe src={fileURL} width="100%" height="100%"></iframe>
       </>
     );
   }

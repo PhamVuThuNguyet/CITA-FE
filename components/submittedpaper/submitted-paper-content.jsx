@@ -13,10 +13,14 @@ const SubmittedPaperContent = ({ data }) => {
       const fileURL = file.publicUrl;
       return (
         <>
-
           <iframe src={fileURL} width="100%" height="100%"></iframe>
-
         </>
+      );
+    } else {
+      return (
+        <h1 style={{ color: 'red', fontSize: '5rem', fontFamily: 'Futura' }}>
+          UPDATING...
+        </h1>
       );
     }
   }

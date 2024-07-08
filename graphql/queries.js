@@ -154,10 +154,13 @@ export const getQuery = (year = 2024) => {
           elements(sortBy: value_ASC, where: { name_contains: "${queryCondition}" }) {
             name
             value
-            content {
-              name
-              value
+            image {
+              publicUrl
             }
+            file {
+              publicUrl
+            }
+            
           }
         }
       }
@@ -172,11 +175,9 @@ export const getQuery = (year = 2024) => {
           elements (where: { name_contains: "${queryCondition}" }) {
             name
             value
-            image {
-              publicUrl
-            }
-            file {
-              publicUrl
+            content(sortBy: order_ASC) {
+              name
+              value
             }
           }
         }

@@ -3,8 +3,7 @@
   margin-bottom: 5rem;
 }
 
-.keynote-item__image{
-    flex-shrink: 0;
+.keynote-item__image {
 }
 
 .keynote-item__info {
@@ -16,41 +15,41 @@
 }
 
 .keynote-item__info__title {
+  font-weight: bold;
+  color: #7a7a7a;
+  p {
+    color: #c92335;
+  }
+}
+
+.keynote-item__info__author {
+  color: #337ab7;
+  margin-top: 1rem;
+  font-weight: bold;
+  strong {
     font-weight: bold;
-    color: #7A7A7A;
-    p{
-        color: #C92335;
-    }
+  }
 }
 
-.keynote-item__info__author{
-    color: #337AB7;
-    margin-top: 1rem;
+.keynote-item__info__position {
+  color: #7a7a7a;
+  font-weight: bold;
+  strong {
     font-weight: bold;
-    strong{
-        font-weight: bold;
-    }
+  }
 }
 
-.keynote-item__info__position{
-    color: #7A7A7A;
-    font-weight: bold;
-    strong{
-        font-weight: bold;
-    }
+.keynote-item__info__address {
+  font-style: italic;
+  p {
+    color: #000;
+  }
 }
 
-.keynote-item__info__address{
-    font-style: italic;
-    p {
-        color: #000;
-    }
-}
-
-.keynote-item__info__intro{
-    text-align: justify;
-    margin-top: 1rem;
-    p {
-        color: #000000;
-    }
+.keynote-item__info__intro {
+  text-align: justify;
+  margin-top: 1rem;
+  p {
+    color: #000000;
+  }
 }

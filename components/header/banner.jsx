@@ -28,6 +28,7 @@ export default function Banner({ data }) {
       </div>
       <div className={styles['banner__logo']}>
         <img src={bannerData.Banner_VKU_Logo.image.publicUrl} />
+        <img src={bannerData.Banner_Koica_Logo.image.publicUrl} />
         <img src={bannerData.Banner_FISU_Logo.image.publicUrl} />
       </div>
       <div>

@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const getQuery = (year = 2024) => {
+export const getQuery = (year = 2025) => {
     const queryCondition = year <= 2023 ? '_2023' : `_${year}`;
 
     const GET_HEADER = gql`

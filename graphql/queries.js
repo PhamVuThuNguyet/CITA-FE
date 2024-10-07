@@ -113,6 +113,23 @@ export const getQuery = (year = 2025) => {
     }
   `;
 
+    const GET_FEE = gql`
+    query getFee {
+      allPages(where: { name: "Submission-Fee" }) {
+        layouts {
+          name
+          elements (where: { name_contains: "${queryCondition}" }) {
+            name
+            value
+            image {
+              publicUrl
+            }
+          }
+        }
+      }
+    }
+  `;
+
     const GET_BOARDS = gql`
     query getBoards {
       allPages(where: { name: "Committees" }) {
@@ -323,6 +340,7 @@ export const getQuery = (year = 2025) => {
         GET_ORGANIZER,
         GET_HOME,
         GET_GUIDELINES,
+        GET_FEE,
         GET_BOARDS,
         GET_CALL_FOR_PAPER,
         GET_SUBMITTED_PAPER,

@@ -264,9 +264,9 @@ export const getQuery = (year = 2025) => {
     }
   `;
 
-    const GET_SPECIAL_SESSION_AICISM = gql`
+    const GET_SPECIAL_SESSION_VISNA = gql`
     query getSecialSession {
-      allPages(where: { name: "Special-Session-AICISM" }) {
+      allPages(where: { name: "Special-Session-VISNA" }) {
         layouts {
           name
           elements(sortBy: order_ASC, where: { name_contains: "${queryCondition}" }) {
@@ -348,7 +348,7 @@ export const getQuery = (year = 2025) => {
         GET_KEYNOTE,
         GET_SCHEDULE,
         GET_SPECIAL_SESSION,
-        GET_SPECIAL_SESSION_AICISM,
+        GET_SPECIAL_SESSION_VISNA,
         GET_SPECIAL_SESSION_CYBER,
         GET_SPECIAL_SESSION_CV,
         GET_SPECIAL_SESSION_BIIDE

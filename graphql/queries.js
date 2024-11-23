@@ -264,7 +264,7 @@ export const getQuery = (year = 2025) => {
     }
   `;
 
-    const GET_SPECIAL_SESSION_AICISM = gql`
+    const GET_SPECIAL_SESSION_VISNA = gql`
     query getSecialSession {
       allPages(where: { name: "Special-Session-VISNA" }) {
         layouts {

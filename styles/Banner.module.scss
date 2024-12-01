@@ -29,10 +29,12 @@
 .banner__logo {
   display: flex;
   margin-top: 3.4rem;
+  align-items: center;
   filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.35));
   gap: 5rem;
   width: 100%;
   justify-content: center;
+  flex-wrap: wrap;
   img {
     max-width: 12.5rem;
     max-height: 10rem;
@@ -73,6 +75,12 @@
 @media only screen and (max-width: 640px) {
   .banner__sponsors {
     display: none;
+  }
+  .banner__logo {
+    gap: 3rem;
+    img {
+      max-width: 40%;
+    }
   }
 }
 

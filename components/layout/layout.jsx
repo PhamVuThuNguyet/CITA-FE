@@ -18,9 +18,7 @@ export default function Layout({
   return (
     <>
       <Head>
-        <title>
-          International Scientific Conference CITA
-        </title>
+        <title>International Scientific Conference CITA</title>
         <meta
           name="description"
           content="The Conference on Information Technology and Its Applications"
@@ -38,6 +36,9 @@ export default function Layout({
             className={['w-2/3 text-center', styles['main-panel']].join(' ')}
           >
             {children}
+            <div className={styles['side-panel-mobile']}>
+              <SideBar data={sidebarData} />
+            </div>
           </div>
 
           <div

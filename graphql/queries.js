@@ -315,9 +315,9 @@ export const getQuery = (year = 2025) => {
   }
 `;
 
-    const GET_SPECIAL_SESSION_BIIDE = gql`
+    const GET_SPECIAL_SESSION_MCIIDE = gql`
   query getSecialSession {
-    allPages(where: { name: "Special-Session-BIIDE" }) {
+    allPages(where: { name: "Special-Session-MCIIDE" }) {
       layouts {
         name
         elements(sortBy: order_ASC, where: { name_contains: "${queryCondition}" }) {
@@ -351,6 +351,6 @@ export const getQuery = (year = 2025) => {
         GET_SPECIAL_SESSION_VISNA,
         GET_SPECIAL_SESSION_CYBER,
         GET_SPECIAL_SESSION_CV,
-        GET_SPECIAL_SESSION_BIIDE
+        GET_SPECIAL_SESSION_MCIIDE
     };
 };

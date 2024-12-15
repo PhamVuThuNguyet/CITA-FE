@@ -2,9 +2,9 @@ import { convertArrayToObject } from '../../utils';
 import styles from '../../styles/NavBar.module.scss';
 import { useEffect, useState } from 'react';
 
-export default function NavBar({ data, sideData }) {
+export default function NavBar({ data, side }) {
   const navData = convertArrayToObject(data.elements);
-  const sideData = convertArrayToObject(sideData.elements);
+  const sideData = convertArrayToObject(side.elements);
   const [color, setColor] = useState(false);
   const [show, setShow] = useState(false);
 
@@ -164,7 +164,7 @@ export default function NavBar({ data, sideData }) {
             <div
               className={styles.navbar_sub_item}
               dangerouslySetInnerHTML={{
-                __html: sidebar.Sidebar_Previous_Content.value,
+                __html: sideData.Sidebar_Previous_Content.value,
               }}
             ></div>
           </div>

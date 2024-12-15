@@ -2,8 +2,9 @@ import { convertArrayToObject } from '../../utils';
 import styles from '../../styles/NavBar.module.scss';
 import { useEffect, useState } from 'react';
 
-export default function NavBar({ data }) {
-  const navData = convertArrayToObject(data.elements);
+export default function NavBar({ navData, sideData }) {
+  const navData = convertArrayToObject(navData.elements);
+  const sideData = convertArrayToObject(sideData.elements);
   const [color, setColor] = useState(false);
   const [show, setShow] = useState(false);
 
@@ -152,6 +153,20 @@ export default function NavBar({ data }) {
                 ></a>
               ))}
             </div>
+          </div>
+
+          <div
+            className={styles.navbar__item}
+            id={styles['menu-previous-years']}
+          >
+            <div>Previous Years</div>
+            <i className="fa fa-caret-down"></i>
+            <div
+              className={styles.navbar_sub_item}
+              dangerouslySetInnerHTML={{
+                __html: sidebar.Sidebar_Previous_Content.value,
+              }}
+            ></div>
           </div>
         </div>
       </nav>

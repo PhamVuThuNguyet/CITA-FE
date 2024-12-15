@@ -26,7 +26,8 @@ export default function Layout({
       </Head>
 
       <header>
-        <NavBar data={[headerData, sidebarData]} />
+        <NavBar data={headerData} sideData={sidebarData} />
+
         <Banner data={bannerData} />
       </header>
 

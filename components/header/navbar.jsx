@@ -2,9 +2,9 @@ import { convertArrayToObject } from '../../utils';
 import styles from '../../styles/NavBar.module.scss';
 import { useEffect, useState } from 'react';
 
-export default function NavBar({ navData, sideData }) {
-  const navData = convertArrayToObject(navData.elements);
-  const sideData = convertArrayToObject(sideData.elements);
+export default function NavBar({ data, side }) {
+  const navData = convertArrayToObject(data.elements);
+  const sideData = convertArrayToObject(side.elements);
   const [color, setColor] = useState(false);
   const [show, setShow] = useState(false);
 

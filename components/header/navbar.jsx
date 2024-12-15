@@ -159,7 +159,9 @@ export default function NavBar({ data, side }) {
             className={styles.navbar__item}
             id={styles['menu-previous-years']}
           >
-            <div>Previous Years</div>
+            <div>
+              <p>Previous Years</p>
+            </div>
             <i className="fa fa-caret-down"></i>
             <div
               className={styles.navbar_sub_item}

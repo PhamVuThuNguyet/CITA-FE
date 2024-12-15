@@ -133,6 +133,12 @@
   display: none;
 }
 
+@media screen and (min-width: 640px) {
+  #menu-previous-years {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .icon {
     position: absolute;
@@ -219,6 +225,9 @@
     }
     #menu-support {
       order: 5;
+    }
+    #menu-previous-years {
+      order: 6;
     }
     .navbar_sub_item {
       left: 100%;
